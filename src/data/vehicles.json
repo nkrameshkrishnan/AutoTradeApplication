@@ -24,9 +24,6 @@
     "fuelHwy": 6.8,
     "colour": "Blizzard Pearl",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 4,
     "features": [
       "Heated front seats",
@@ -77,9 +74,59 @@
       ]
     },
     "sourceUrl": "https://www.clutch.ca/cars/toyota",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "TOYOTA",
+      "models": [
+        "RAV4"
+      ],
+      "year": 2021
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 11
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2023684",
+          "date": "2023-12-20",
+          "system": "Airbag",
+          "manufacturerNumber": "SRC RF9 / SRC RG1",
+          "summary": "Issue: On certain vehicles, a sensor for the occupant classification system (OCS) may not have been manufactured properly. As a result, the sensor could short circuit and cause the airbag system to turn off the passenger-front airbag even when a passenger is seated. Note: This problem would cause a warning message to display on the instrument panel and the airbag indicator light would display \"passenger airbag off\". Safety Risk: An airbag that is turned off could increase the risk of injury to a passenger in a crash. Corrective Actions: Toyota will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the OCS sensor."
+        }
+      ]
+    }
   },
   {
     "id": "2022-honda-civic-ex",
@@ -106,9 +153,6 @@
     "fuelHwy": 5.7,
     "colour": "Rallye Red",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 9,
     "features": [
       "Heated front seats",
@@ -153,9 +197,87 @@
       ]
     },
     "sourceUrl": "https://www.autotrader.ca/cars/honda/",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "HONDA",
+      "models": [
+        "CIVIC"
+      ],
+      "year": 2022
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 10
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026251",
+          "date": "2026-05-21",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "HQ62-70/AM96-AN00",
+          "summary": "Issue: On certain vehicles, the weight sensor for the front passenger seat may not have been manufactured properly. As a result, the passenger-front airbag and knee airbag could deploy in a crash that doesn't require them to. Note: This recall is an expansion of Transport Canada recall no. 2024-059. If the weight sensor fails, the SRS warning light would turn on in the instrument panel. Safety Risk: An airbag system that doesn't work properly could increase the risk of injury in a crash. Corrective Actions: The company will notify owners by mail and advise you to take your vehicle to a dealership to replace the passenger-front seat weight sensor."
+        },
+        {
+          "number": "2025599",
+          "date": "2025-10-30",
+          "system": "Wheels",
+          "manufacturerNumber": "HQ40",
+          "summary": "Issue: This recall is for certain aluminum wheels that were installed before delivery or sold as a dealer accessory. On certain vehicles, the wheels may not have been manufactured properly. As a result, the wheel nut(s) could loosen and cause the wheel(s) to detach. Safety Risk: A wheel separation could cause a loss of control and increase the risk of a crash. Additionally, a wheel that separates could create a road hazard for others. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the hub(s), wheel(s) and wheel nut(s)."
+        },
+        {
+          "number": "2024588",
+          "date": "2024-10-03",
+          "system": "Steering",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the steering gearbox may not have been manufactured properly. As a result, there could be a sudden change in steering feel and an increase in steering effort. Safety Risk: A sudden change in steering effort could increase the risk of a crash. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to add grease to the steering gearbox and replace the electronic power steering spring."
+        },
+        {
+          "number": "2024059",
+          "date": "2024-02-01",
+          "system": "Airbag",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the weight sensor for the front passenger seat may not have been manufactured properly. As a result, the passenger-front airbag and knee airbag could deploy in a crash that doesn't require them to. Note: If the weight sensor fails, the SRS warning light would turn on in the instrument panel. Safety Risk: An airbag system that doesn't work properly could increase the risk of injury in a crash. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership for an inspection if the SRS warning light is on. If the SRS warning light is on due to a faulty weight sensor, the weight sensor will be replaced. When repair parts are available, Honda will send you a second letter. They will advise you to take your vehicle to a dealership to replace the passenger-front seat weight sensor."
+        },
+        {
+          "number": "2023562",
+          "date": "2023-10-19",
+          "system": "Steering",
+          "manufacturerNumber": "HP63",
+          "summary": "Issue: On certain vehicles, the incorrect steering gear box assembly may have been installed during a repair. As a result, the tires could become damaged by contact with the chassis and fail. Safety Risk: A tire failure could cause a loss of control and increase the risk of a crash. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the steering gear box assembly. The dealer will also inspect the tires for damage and replace them, as necessary."
+        }
+      ]
+    }
   },
   {
     "id": "2020-ford-f150-xlt",
@@ -182,10 +304,6 @@
     "fuelHwy": 9.6,
     "colour": "Iconic Silver",
     "seats": 5,
-    "owners": 2,
-    "accidents": 1,
-    "carfax": "1 minor accident",
-    "carfaxNote": "Rear bumper, 2022 · $1,840 claim",
     "listedDays": 12,
     "features": [
       "Heated front seats",
@@ -230,7 +348,129 @@
     },
     "sourceUrl": "https://www.google.com/search?q=2020+Ford+F-150+dealer+Calgary",
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "FORD",
+      "models": [
+        "F-150"
+      ],
+      "year": 2020
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 2,
+      "accidents": [
+        {
+          "date": "2022-06-14",
+          "province": "AB",
+          "description": "Rear bumper damage reported by insurer",
+          "claim": 1840
+        }
+      ],
+      "damageReported": true,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Fleet",
+        "Personal"
+      ],
+      "registrations": [
+        "AB"
+      ],
+      "lastRegisteredProvince": "AB",
+      "serviceRecords": 14
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026288",
+          "date": "2026-06-10",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "26C27",
+          "summary": "Issue: On certain trucks, the recall repairs completed by a Ford dealer during recall 20C03 (Transport Canada recall no. 2020-071) may not have been done correctly. As a result, a second repair is required. On certain trucks, a software problem could cause the daytime running lamps (DRLs) to remain on when switching the master lighting switch from the ''Autolamp'' position to the ''headlamp on'' position. Canadian regulations require the DRLs to turn off when the headlamps are switched on. Safety Risk: Daytime running lamps that stay on could cause glare for oncoming drivers and increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your truck to a dealership to update the body control module software."
+        },
+        {
+          "number": "2025360",
+          "date": "2025-06-27",
+          "system": "Visual System",
+          "manufacturerNumber": "25S72",
+          "summary": "Issue: On certain vehicles, a software problem could cause the rearview camera image not to display when the transmission is shifted into reverse. Canadian regulations require the rearview image to display when the vehicle is reversing. Safety Risk: A rearview camera image that doesn't display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to update the SYNC software."
+        },
+        {
+          "number": "2024779",
+          "date": "2024-12-20",
+          "system": "Visual System",
+          "manufacturerNumber": "24S77",
+          "summary": "Issue: On certain trucks, the windshield wiper linkage could corrode and seize. If this happens, the windshield wipers may not work. Safety Risk: Windshield wipers that don't work could reduce visibility and increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your truck to a dealership to replace the windshield wiper linkage."
+        },
+        {
+          "number": "2022197",
+          "date": "2022-04-14",
+          "system": "Visual System",
+          "manufacturerNumber": "22S26",
+          "summary": "Issue: On certain trucks, the windshield wiper arms may not have been manufactured correctly. As a result, the wiper arms could slip and they may not wipe the windshield properly. Safety Risk: Windshield wipers that do not work properly could affect a driver's visibility. This could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a dealership to replace the windshield wiper arms."
+        },
+        {
+          "number": "2020454",
+          "date": "2020-09-24",
+          "system": "Visual System",
+          "manufacturerNumber": "20C19",
+          "summary": "Issue: On certain vehicles, an electrical problem with the rearview camera could cause it not to work properly. As a result, the rearview image may be distorted or not display at all. Safety Risk: A rearview camera image that does not display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a dealer to replace the rearview camera."
+        },
+        {
+          "number": "2020144",
+          "date": "2020-04-06",
+          "system": "Powertrain",
+          "manufacturerNumber": "20S18",
+          "summary": "Issue: On certain vehicles, the transmission shift cable may detach. This could cause the transmission not to shift gears when the shifter is moved. As a result, the transmission could be in a different gear than the gear shifter indicates. If a driver attempts to exit the vehicle while the transmission is not in Park, and the parking brake is not applied, it could move suddenly. Safety Risk: Sudden and unexpected movement of the vehicle could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a Ford or Lincoln dealer to inspect the shift cable locking clip. It will be re-seated if necessary. Ford advises that you should apply the parking brake each time the vehicle is parked, until the recall repairs being completed."
+        },
+        {
+          "number": "2020071",
+          "date": "2020-02-21",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "20C03",
+          "summary": "Issue: On certain trucks, there may be a problem with the software that controls the daytime running lights (DRLs). When the DRLs are on and the master lighting switch is rotated from the “Autolamp” position to the “headlamp on” position, the DRLs do not lower to parking light brightness. Canadian regulations require that the DRLs turn off when the headlights are turned on. Note: This only affects trucks equipped with LED headlights and the Autolamp feature (automatic headlights). Safety Risk: Lights that are too bright could cause glare for oncoming drivers. Corrective Actions: Ford will notify owners by mail and instruct you to take your truck to a Ford or Lincoln dealer to update the body control module (BCM) software."
+        },
+        {
+          "number": "2019666",
+          "date": "2019-12-20",
+          "system": "Tires",
+          "manufacturerNumber": "19S55",
+          "summary": "Issue: On certain trucks, the bead area of the spare tire may have been damaged when it was mounted onto the rim. Over time, this could cause the bead wire to separate and may result in tire failure. Safety Risk: A tire failure could affect vehicle control and increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a Ford or Lincoln dealer to replace the spare tire."
+        },
+        {
+          "number": "2019568",
+          "date": "2019-11-12",
+          "system": "Electrical",
+          "manufacturerNumber": "19S40",
+          "summary": "Issue: On certain trucks, a connection on the battery positive terminal could come loose. This can result in a loss of instrument panel displays, braking or steering assist, or cause the engine to stall. This issue could also create a high-resistance connection. Safety Risk: A loss of engine power and/or a loss of power to electrical systems could increase the risk of a crash. A high-resistance connection could create a fire risk. Corrective Actions: Ford will notify owners by mail and instruct you to take your truck to a Ford or Lincoln dealer to inspect the connection of the positive battery cable. It will be cleaned and tightened as necessary."
+        },
+        {
+          "number": "2019437",
+          "date": "2019-08-29",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "19C07",
+          "summary": "Issue: On certain vehicles, seats with a manual recliner may not meet the strength requirements of Canadian regulations. A seatback with reduced strength may not properly restrain an occupant in a crash. Safety Risk: A seatback that moves in a crash could increase the risk of injury. Corrective Actions: Ford will notify owners by mail and instruct them to take their vehicle to a Ford or Lincoln dealer for an inspection of the driver and front passenger seat recliners. For 2020 model year Explorer and Aviator, dealers will inspect the rear outboard seats. The seat structures will be replaced as required."
+        }
+      ]
+    }
   },
   {
     "id": "2022-tesla-model-3-long-range",
@@ -257,9 +497,6 @@
     "evConsumption": 16.1,
     "colour": "Cream (wrapped)",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 6,
     "features": [
       "Heated front seats",
@@ -307,9 +544,129 @@
       ]
     },
     "sourceUrl": "https://www.cargurus.ca/Cars/l-Used-Tesla-Model-3",
-    "carfaxNote": null,
     "fuelCity": null,
-    "fuelHwy": null
+    "fuelHwy": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "TESLA",
+      "models": [
+        "MODEL 3"
+      ],
+      "year": 2022
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "BC"
+      ],
+      "lastRegisteredProvince": "BC",
+      "serviceRecords": 10
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026401",
+          "date": "2026-08-19",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "SB-24-17-003",
+          "summary": "Issue: On certain vehicles, the low beam headlights may be too bright. Canadian regulations specify a maximum brightness for low beam headlights. Safety Risk: Low beam headlights that are too bright could cause reduced visibility for the driver and/or glare for oncoming drivers and increase the risk of a crash. Corrective Actions: Tesla will notify owners by email and advise you to take your vehicle to a dealership to replace the headlights."
+        },
+        {
+          "number": "2026221",
+          "date": "2026-05-05",
+          "system": "Visual System",
+          "manufacturerNumber": "SB-26-00-001",
+          "summary": "Issue: On certain vehicles, a software problem could delay the rearview camera image from displaying when the transmission is shifted into reverse shortly after the vehicle is started. Canadian regulations require the rearview image to display within 2 seconds of shifting the transmission into reverse gear. Safety Risk: A rearview camera image that doesn't display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: Tesla will notify owners by email. Tesla has released an over-the-air software update to fix this problem. There is no further action required if your vehicle has software release 2026.8.6.1 or a later release."
+        },
+        {
+          "number": "2024427",
+          "date": "2024-07-25",
+          "system": "Electrical",
+          "manufacturerNumber": "SB-24-00-012",
+          "summary": "Issue: On certain vehicles, the hood latch assembly could fail and cause the unlatched hood warning not to display on the instrument panel. As a result, you may not be aware that the hood isn't latched properly. If this happens, the hood could open suddenly while driving. Safety Risk: A hood that opens suddenly while driving can block the driver's view and increase the risk of a crash. Corrective Actions: Tesla will notify affected owners by email. Tesla has released an over-the-air software update to fix this issue. There is no further action required if your vehicle has software release 2024.20.3 or a later release."
+        },
+        {
+          "number": "2024298",
+          "date": "2024-05-28",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "SB-24-00-008",
+          "summary": "Issue: On certain vehicles, the seat belt reminder chime and visual warning may not work when you start the vehicle and your seat belt is not buckled. Canadian regulations require both a seat belt reminder sound and visual telltale when a driver is not wearing their seat belt. Safety Risk: A seat belt warning that doesn't work correctly may not remind you to buckle your seat belt. Not wearing your seat belt can increase the risk of injury in a crash. Corrective Actions: Tesla will notify owners by email and supply an over-the-air software update to activate the seat belt reminder chime and visual warning."
+        },
+        {
+          "number": "2024283",
+          "date": "2024-05-21",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "SB-24-00-007",
+          "summary": "Issue: A previous over-the-air (OTA) software update could cause the vehicle not to display the correct visual warning indicators when there are problems with the brake system or when the parking brake is applied. As a result, the BRAKE, PARK, and antilock brake system (ABS) visual indicators would display as text instead of symbols. Safety Risk: While there is a low risk to safety, Canadian regulations require visual warnings to use common symbols, instead of words, to avoid driver confusion. Corrective Actions: Tesla will notify affected owners by email. Tesla has released an over-the-air software update to fix this problem. There is no further action required if your vehicle has software release 2024.3.25, 2024.14.5, or a release later than 2024.14.5."
+        },
+        {
+          "number": "2024130",
+          "date": "2024-02-27",
+          "system": "Other",
+          "manufacturerNumber": "SB-24-00-006",
+          "summary": "Issue: On certain vehicles, a software problem could cause the pedestrian warning system not to work. As a result, the vehicle may not produce enough sound to be detected by other road users. New Canadian regulations require electric vehicles to make a minimum sound level when operating at low speeds. Safety Risk: A pedestrian warning system that doesn't work could create an increased risk of injury for other road users. Corrective Actions: Tesla will notify affected owners by email. Tesla has released an over-the-air software update to fix this problem. There is no further action required if your vehicle has software release 2023.44.30.14 or a software deployed after 2023.44.30.14."
+        },
+        {
+          "number": "2023657",
+          "date": "2023-12-12",
+          "system": "Accessories",
+          "manufacturerNumber": "SB-23-00-008",
+          "summary": "Issue: On vehicles equipped with the Autosteer advanced driver-assistance feature, when using the feature, the vehicle may not provide strong enough warnings or monitor the driver closely enough to prevent misuse of the feature. Safety Risk: A driver that doesn't pay close attention while using the Autosteer feature or who doesn't react quickly when Autosteer is canceled could have an increased risk of a crash. Corrective Actions: Tesla will notify owners by email and supply an over-the-air software update to improve driver monitoring and alerts while using the Autosteer feature. Tesla advises that you must always pay attention and be ready to take control of the vehicle at any time while using the Autosteer advanced driver-assistance feature."
+        },
+        {
+          "number": "2023063",
+          "date": "2023-02-14",
+          "system": "Accessories",
+          "manufacturerNumber": "SB-23-00-001",
+          "summary": "Issue: In certain traffic situations, when the FSD Beta advanced driver assistance feature is engaged, the vehicle may perform maneuvers that break certain traffic laws, if the driver doesn't intervene and take control. Note: This recall only affects vehicles equipped with the FSD Beta feature. Safety Risk: Certain maneuvers performed by the FSD Beta advanced driver assistance feature may break traffic laws. This could increase the risk of a crash if the driver doesn't intervene. Corrective Actions: Tesla will notify owners by email and supply an over-the-air software update to improve how the FSD Beta feature maneuvers the vehicle in certain traffic situations. Tesla reminds that FSD Beta is only an advanced driver assistance feature, and the driver must pay attention and be ready to take control at all times when the feature is engaged."
+        },
+        {
+          "number": "2022604",
+          "date": "2022-10-21",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "SB-22-20-004",
+          "summary": "Issue: On certain vehicles, the bolt attaching the left-rear seat belt buckle and center-rear seat belt anchorage may not have been reassembled correctly after previous service repair. As a result, the seat belts may not work properly in a crash. Safety Risk: A seat belt that moves or detaches in a crash could create an increased risk of injury. Corrective Actions: Tesla will notify owners by email and advise you to contact Tesla Service to arrange for an inspection of the left-rear seat belt buckle and center-rear seat belt anchorage bolt. The bolt will be re-tightened, if necessary."
+        },
+        {
+          "number": "2022528",
+          "date": "2022-09-20",
+          "system": "Visual System",
+          "manufacturerNumber": "SB-22-70-002",
+          "summary": "Issue: The window automatic reversal system may not react correctly after detecting an obstruction. This could cause the window to close with too much force before it stops and retracts. Also, the window may not retract enough after detecting an obstruction. As a result, the power windows do not pass certain tests under Canadian safety regulations. Safety Risk: A window that closes with excessive force could pinch a person and create a risk of injury. Corrective Actions: Tesla will email a notice to owners and provide an over-the-air firmware update to fix this condition."
+        },
+        {
+          "number": "2022037",
+          "date": "2022-02-01",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "SB-22-00-002",
+          "summary": "Issue: Under certain conditions, the seat belt reminder chime may not sound when you start the vehicle and your seat belt is not buckled. Canadian regulations require both a seat belt reminder sound and visual telltale when a driver is not wearing their seat belt. Safety Risk: A seat belt warning that does not work correctly may not remind you to buckle your seat belt. Not wearing your seat belt can increase the risk of injury in a crash. Corrective Actions: Tesla will email a notice to owners and provide an over-the-air firmware update in early February 2022 to fix this problem. There is no further action required if your vehicle has firmware release 2021.43.101.1 or 2022.4.5, or a later release."
+        }
+      ]
+    }
   },
   {
     "id": "2019-mazda-mazda3-sport-gs",
@@ -336,9 +693,6 @@
     "fuelHwy": 6.6,
     "colour": "Snowflake White Pearl",
     "seats": 5,
-    "owners": 2,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 2,
     "features": [
       "Heated front seats",
@@ -386,9 +740,95 @@
       ]
     },
     "sourceUrl": "https://www.clutch.ca/cars/mazda",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "MAZDA",
+      "models": [
+        "MAZDA3"
+      ],
+      "year": 2019
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 2,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON",
+        "QC"
+      ],
+      "lastRegisteredProvince": "QC",
+      "serviceRecords": 11
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2019649",
+          "date": "2019-12-19",
+          "system": "Brakes",
+          "manufacturerNumber": "4219L",
+          "summary": "Issue: On certain cars, the automatic emergency braking system (called Smart Brake Support or SBS) may falsely detect an obstacle in front of the car while driving. As a result, the brakes may apply automatically when there is no risk of a crash. Safety Risk: If the SBS system activates the brakes unexpectedly when there is no risk of a crash, there could be an increased risk of a rear-end crash. Corrective Actions: Mazda will notify owners by mail and instruct you to take your car to a dealer to update the SBS control software. On certain cars with earlier build dates, the instrument cluster will also be reprogrammed or replaced. Mazda will provide these owners with an updated owner's manual that provides revised information about how to temporarily deactivate the SBS system."
+        },
+        {
+          "number": "2019369",
+          "date": "2019-07-29",
+          "system": "Visual System",
+          "manufacturerNumber": "3919G",
+          "summary": "Issue: On certain cars, the interior rearview mirror glass was not properly attached and could fall off. Safety Risk: If interior rearview mirror glass suddenly falls off, the driver’s rear visibility will be decreased. This could increase the risk of a crash. Corrective Actions: Mazda will notify owners by mail and instruct them to take their car to a dealer to replace the interior rearview mirror."
+        },
+        {
+          "number": "2019337",
+          "date": "2019-07-05",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "3819F",
+          "summary": "Issue: The material on the driver and front passenger seatbacks may not be installed correctly. This could cause it to in interfere with the release button for the head restraint. As a result, the button could be stuck in the ‘release’ position and allow the head restraint to move up and down freely. In a crash, this could allow the head restraint to detach. Safety Risk: A head restraint that does not remain in place in a crash could create a risk of injury. Corrective Actions: Mazda will notify owners by mail and instruct them to take their vehicle to a dealership to install a plastic spacer at the bottom of the head restraint lock release button."
+        },
+        {
+          "number": "2019322",
+          "date": "2019-06-27",
+          "system": "Engine",
+          "manufacturerNumber": "3719F",
+          "summary": "Issue: On certain vehicles, a software error in the Powertrain Control Module (PCM) could cause the valve clearance adjuster not to work properly. This could result in internal engine damage. If this happens, the engine may misfire and lose power. In the worst case, the engine may stall while driving without the ability to restart it. The malfunction indicator light (MIL) may also turn on in the instrument cluster. Safety Risk: A sudden loss of engine power could increase the risk of a crash. Corrective Actions: Mazda will notify owners by mail and instruct them to take their vehicle to a dealer to update the PCM software."
+        },
+        {
+          "number": "2019274",
+          "date": "2019-06-07",
+          "system": "Wheels",
+          "manufacturerNumber": "3519F",
+          "summary": "Issue: On certain cars, the wheel lug nuts may not be properly tightened due to a manufacturing issue. This could cause the nuts to loosen or fall off, and could result in a wheel separating from the car. Safety Risk: A wheel separation could increase the risk of a crash. A wheel that separates could also hit another person or vehicle. Corrective Actions: The company will notify owners by mail and instruct them to take their car to a dealer to re-tighten the front and rear wheel nuts to the proper specification."
+        },
+        {
+          "number": "2019224",
+          "date": "2019-05-14",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "3319E",
+          "summary": "Issue: On certain cars, the passenger airbag status and seat belt status indicator lights may not work properly. These lights are designed to indicate when the passenger airbag is turned off and when a passenger is not buckled. Instead, this problem could cause the passenger airbag status indicator light to incorrectly turn off when the passenger airbag is deactivated. It could also cause the passenger seat belt status indicator to incorrectly turn off when the seat belt is not buckled. Additionally, the rear seat belt status indicators may turn off regardless of seat belt use. Note: This problem has no effect on the operation of the airbag system. Safety Risk: Seat belt and airbag indicator lights that do not work properly could cause confusion. They could also cause a driver to be unaware that the rear seat occupants are not buckled. This could increase the risk of injury in a crash. Corrective Actions: The company will notify owners by mail and instruct them to take their car to a dealer to replace the seat belt indicator assembly."
+        }
+      ]
+    }
   },
   {
     "id": "2021-hyundai-kona-electric-preferred",
@@ -415,9 +855,6 @@
     "evConsumption": 16.9,
     "colour": "Ceramic Blue",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 15,
     "features": [
       "Heated front seats",
@@ -462,9 +899,73 @@
       ]
     },
     "sourceUrl": "https://www.autotrader.ca/cars/hyundai/",
-    "carfaxNote": null,
     "fuelCity": null,
-    "fuelHwy": null
+    "fuelHwy": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "HYUNDAI",
+      "models": [
+        "KONA EV"
+      ],
+      "year": 2021
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "QC"
+      ],
+      "lastRegisteredProvince": "QC",
+      "serviceRecords": 11
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2025636",
+          "date": "2025-11-17",
+          "system": "Other",
+          "manufacturerNumber": "C0624 / C0709",
+          "summary": "Issue : Hyundai Auto Canada is conducting an extended warranty campaign for certain vehicles as water could enter the horn assembly and cause the horn's electrical contacts to corrode. As a result, the horn may not work properly or at all. Safety risk: A horn that doesn't work properly could prevent a driver from warning others of a danger and create an unsafe situation. Corrective Actions: To reduce the safety risk, Hyundai advises you to test the horn regularly. Hyundai will notify owners in writing and advise you to contact a dealership if your horn doesn't work properly. Hyundai will provide an extended warranty of 10 years/200 000 km to replace the horn for free if it fails."
+        },
+        {
+          "number": "2022728",
+          "date": "2022-12-16",
+          "system": "Electrical",
+          "manufacturerNumber": "R0229 (21D184)",
+          "summary": "Issue: On certain electric vehicles, the electric power control unit (EPCU) may not be sealed correctly. As a result, coolant could leak inside the EPCU and onto the circuit board. If this happens, the vehicle could suddenly lose power to the wheels. Safety Risk: A sudden loss of power to the wheels may increase the risk of a crash. Corrective Action: Hyundai will notify owners by mail and instruct you to take your vehicle to a dealership to inspect and, if necessary, replace the EPCU."
+        },
+        {
+          "number": "2020593",
+          "date": "2020-12-02",
+          "system": "Brakes",
+          "manufacturerNumber": "R0178 (01D102)",
+          "summary": "Issue: On certain vehicles, an abnormal sensor signal to the Integrated Electronic Brake (IEB) system could cause a sudden reduction in braking performance. If this happens, a brake warning light will turn on in the instrument cluster. Safety Risk: Reduced brake performance can cause extended stopping distances and increase the risk of a crash. Corrective Actions: Hyundai will notify owners by mail and instruct you to take your vehicle to a dealer to update the IEB system software."
+        }
+      ]
+    }
   },
   {
     "id": "2020-subaru-outback-touring",
@@ -487,13 +988,10 @@
     "transmissionDetail": "CVT automatic",
     "drivetrain": "AWD",
     "fuelType": "Gas",
-    "fuelCity": 9.0,
+    "fuelCity": 9,
     "fuelHwy": 7.1,
     "colour": "Ice Silver Metallic",
     "seats": 5,
-    "owners": 2,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 21,
     "features": [
       "Heated front seats",
@@ -555,9 +1053,94 @@
       ]
     },
     "sourceUrl": "https://www.clutch.ca/cars/subaru",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "SUBARU",
+      "models": [
+        "OUTBACK"
+      ],
+      "year": 2020
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 2,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "AB"
+      ],
+      "lastRegisteredProvince": "AB",
+      "serviceRecords": 10
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2024546",
+          "date": "2024-08-15",
+          "system": "Label",
+          "manufacturerNumber": "WRZ-24",
+          "summary": "Issue: On certain vehicles, the compliance label may be missing information in French. The words listed on the label for \"Tires\", \"Rims\", \"Front\" and \"Rear\" appear in English only, when they should be listed as \"Tires/Pneus\", \"Rims/Jantes\", \"Front/Avant\" and \"Rear/Arriere\". Canadian regulations require this information to be listed on the label in both English and French. Safety Risk: These small errors do not affect vehicle safety. Corrective Actions: This is not a recall. Subaru has corrected the compliance label for all new vehicles."
+        },
+        {
+          "number": "2024190",
+          "date": "2024-03-22",
+          "system": "Airbag",
+          "manufacturerNumber": "WRA-24",
+          "summary": "Issue: On certain vehicles, an electrical component in the sensors for the occupant detection system (ODS) may not have been manufactured properly and could crack. Over time, moisture could enter the crack and cause a short circuit. If this happens, the passenger-front airbag may not deploy in a crash, even when a passenger is seated. Note: This problem would cause the SRS warning light to turn on in the instrument panel and the passenger airbag indicator light would display \"OFF\". Safety Risk: An airbag that does not work properly could increase the risk of injury to a passenger in a crash. Corrective Actions: Subaru will notify owners by mail and advise you to take your vehicle to a dealership to replace the ODS sensors in the front passenger seat. To reduce the safety risk, Subaru advises that you shouldn't use the front passenger seat if the SRS (airbag) warning light is on and the passenger airbag indicator light displays \"OFF\"."
+        },
+        {
+          "number": "2021745",
+          "date": "2021-12-10",
+          "system": "Powertrain",
+          "manufacturerNumber": "WRK-21",
+          "summary": "Issue: On certain vehicles, a software problem in the transmission control unit (TCU) may cause the drive chain to slip or break. If this happens while the vehicle is in motion, there could be a loss of power to the wheels. Safety Risk: A loss of power to the wheels could increase the risk of a crash. Corrective Actions: Subaru will notify owners by mail and instruct you to take your vehicle to a dealer to inspect the transmission chain guide and update the TCU. If necessary, the transmission assembly will be replaced."
+        },
+        {
+          "number": "2021466",
+          "date": "2021-07-29",
+          "system": "Fuel System",
+          "manufacturerNumber": "WRG-21",
+          "summary": "Issue: On certain vehicles, the low-pressure fuel pump could fail. If this happens, then engine may run rough or may not start and the check engine light may turn on. This could also result in a sudden loss of engine power while driving. Safety Risk: A sudden loss of engine power could increase the risk of a crash. Corrective Actions: Subaru will notify owners by mail and instruct you to take your vehicle to a dealer to replace the fuel pump."
+        },
+        {
+          "number": "2020607",
+          "date": "2020-12-10",
+          "system": "Visual System",
+          "manufacturerNumber": "WRH-20",
+          "summary": "Issue: On certain vehicles, a software update could cause the Centre Information Display (\"CID\") to go blank. When this happens, the cockpit control module (\"CCM\") will continuously reboot every three (3) minutes. As a result, the rearview camera image will disappear during the reboot process. Safety Risk: A rearview camera that turns off could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: Subaru will notify owners by mail and instruct you to take your vehicle to a dealer to update vehicle software. If the centre information display is not working properly, the cockpit control module will be replaced."
+        },
+        {
+          "number": "2019536",
+          "date": "2019-10-25",
+          "system": "Accessories",
+          "manufacturerNumber": "WUO-01",
+          "summary": "Issue: Certain vehicles were shipped with the incorrect floor mat bracket. As a result, the floor mats may not be properly attached. A driver’s floor mat that moves could interfere with the accelerator or brake pedals. Safety Risk: A floor mat that interferes with the accelerator and/or the brake pedal could increase the risk of a crash. Corrective Actions: Subaru will notify owners by mail and instruct you to take your vehicle to a dealer to inspect the floor mat bracket. If the wrong part is installed, it will be replaced. Subaru recommends that you remove the driver’s floor mat until the recall repairs are performed."
+        }
+      ]
+    }
   },
   {
     "id": "2023-toyota-camry-hybrid-se",
@@ -584,9 +1167,6 @@
     "fuelHwy": 4.9,
     "colour": "Wind Chill Pearl",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 3,
     "features": [
       "Heated front seats",
@@ -614,9 +1194,59 @@
       "attention": []
     },
     "sourceUrl": "https://www.google.com/search?q=2023+Toyota+Camry+Hybrid+dealer+Toronto",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY"
+      ],
+      "year": 2023
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 9
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2024110",
+          "date": "2024-02-21",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "SRC RG2",
+          "summary": "Issue: On certain vehicles, the head restraints on the second-row center and/or right seat(s) may not have been properly welded. As a result, the head restraint(s) could move or detach from a seat in a crash. Safety Risk: Head restraints that move or detach in a crash could increase the risk of an injury. Corrective Actions: Toyota will notify owners by mail and advise you to take your vehicle to a dealership to replace the second-row right seatback frame."
+        }
+      ]
+    }
   },
   {
     "id": "2021-ram-1500-big-horn",
@@ -643,10 +1273,6 @@
     "fuelHwy": 10.4,
     "colour": "Bright White",
     "seats": 5,
-    "owners": 1,
-    "accidents": 1,
-    "carfax": "1 minor accident",
-    "carfaxNote": "Front fender, 2023 · $2,310 claim",
     "listedDays": 8,
     "features": [
       "Heated front seats",
@@ -698,7 +1324,156 @@
     },
     "sourceUrl": "https://www.autotrader.ca/cars/ram/",
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "RAM",
+      "models": [
+        "1500"
+      ],
+      "year": 2021
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [
+        {
+          "date": "2023-02-03",
+          "province": "ON",
+          "description": "Front fender damage reported by insurer",
+          "claim": 2310
+        }
+      ],
+      "damageReported": true,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 9
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026371",
+          "date": "2026-07-30",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "67D",
+          "summary": "Issue: On certain trucks, the second-row seat belt anchors may not be properly attached. As a result, the seat belt(s) could detach in a crash. Safety Risk: A seat belt that detaches could increase the risk of injury in a crash. Corrective Actions: FCA Canada will notify owners in writing and advise you to take your truck to a dealership to inspect and, if necessary, secure the second-row seat belt buckle(s) to the body."
+        },
+        {
+          "number": "2026347",
+          "date": "2026-07-16",
+          "system": "Visual System",
+          "manufacturerNumber": "68D",
+          "summary": "Issue: On certain trucks, the passenger-side mirror glass may not be attached properly. As a result, the mirror glass could fall off. Note: This recall only affects certain trucks equipped with a heated trailer tow mirror. Safety Risk: A missing mirror will reduce rear visibility and could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners in writing and advise you to take your truck to a dealership to replace the passenger side mirror glass."
+        },
+        {
+          "number": "2025613",
+          "date": "2025-11-06",
+          "system": "Airbag",
+          "manufacturerNumber": "14C",
+          "summary": "Issue: On a small number of vehicles, the steering column control module may not have been manufactured properly. As a result, the driver-front airbag may not inflate in a crash. Note: This problem would cause the airbag warning light to turn on. Safety Risk: An airbag that is turned off could increase the risk of injury in a crash. Corrective Actions: FCA Canada will notify owners in writing and advise you to take your vehicle to a dealership to replace the steering column control module."
+        },
+        {
+          "number": "2024596",
+          "date": "2024-10-10",
+          "system": "Visual System",
+          "manufacturerNumber": "86B",
+          "summary": "Issue: On certain trucks, the driver's side mirror glass may not be attached properly. As a result, the mirror glass could fall off. Note: This recall only affects certain trucks equipped with a heated trailer tow mirror. Safety Risk: A missing mirror will reduce rear visibility and could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners by mail and advise you to take your truck to a dealership to replace the driver side mirror glass."
+        },
+        {
+          "number": "2024503",
+          "date": "2024-09-05",
+          "system": "Brakes",
+          "manufacturerNumber": "75B",
+          "summary": "Issue: On certain trucks, a software problem could cause the electronic stability control (ESC) system not to work. As a result, the vehicles may not meet certain requirements of Canadian regulations. Note: This problem would cause warning lights for the antilock braking system (ABS), ESC, adaptive cruise control (ACC), and forward collision warning (FCW) to appear on the instrument panel. Safety Risk: An electronic stability control system that doesn't work could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners by mail and advise you to take your truck to a dealership to update the antilock braking system (ABS) control module software."
+        },
+        {
+          "number": "2023221",
+          "date": "2023-04-13",
+          "system": "Engine",
+          "manufacturerNumber": "37A",
+          "summary": "Issue: Under certain driving conditions, a problem with the powertrain control module (PCM) could cause the engine to stall. Note: This recall only affects trucks equipped with a 5.7 L eTorque engine. Safety Risk: A sudden loss of engine power could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners by mail and instruct you to take your truck to a dealership to update the PCM calibration software."
+        },
+        {
+          "number": "2023047",
+          "date": "2023-02-09",
+          "system": "Visual System",
+          "manufacturerNumber": "14A",
+          "summary": "Issue: On certain vehicles equipped with a trailer reverse steering module (TRSCM), the rearview camera image may not appear on the display when backing-up. Canadian regulations require the rearview image to display when the transmission is shifted into reverse gear. Safety Risk: A rearview camera image that does not display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Action: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealership to update the trailer reverse steering control module software."
+        },
+        {
+          "number": "2022583",
+          "date": "2022-10-14",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "Z95",
+          "summary": "Issue: On certain vehicles, there may be a problem with the driver and front passenger seat belt pretensioners. As a result, the seat belt pretensioners may not work properly in a crash. Safety Risk: A seat belt pretensioner that does not work properly could increase the risk of injury in a crash. Corrective Actions: FCA Canada will contact owners by mail and instruct you to bring your vehicle to a dealership to replace the driver and front passenger seat belt pretensioners."
+        },
+        {
+          "number": "2022584",
+          "date": "2022-10-14",
+          "system": "Engine",
+          "manufacturerNumber": "Z96",
+          "summary": "Issue: On certain vehicles equipped with a 3.0 L diesel engine, the high-pressure fuel pump could fail. If this happens, you may notice a change in engine performance, a fuel leak, or a malfunction indicator lamp and/or service electronic throttle control tell-tale may turn on. This could also result in a sudden loss of engine power while driving. Safety Risk: A sudden loss of engine power could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealership to replace the high-pressure fuel pump. Additional fuel system parts may be replaced, if necessary."
+        },
+        {
+          "number": "2022476",
+          "date": "2022-08-25",
+          "system": "Visual System",
+          "manufacturerNumber": "Z86",
+          "summary": "Issue: On certain vehicles equipped with a 3.0 L diesel engine, a software problem could cause the radio to reset. If you shift to reverse while the computer is resetting, the rearview camera image will not appear on the display. Canadian regulations require the rearview image to display when the transmission is shifted into reverse gear. Safety Risk: A rearview camera image that is slow to appear could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealership to update the radio software."
+        },
+        {
+          "number": "2021722",
+          "date": "2021-11-24",
+          "system": "Airbag",
+          "manufacturerNumber": "Y99 & Z07",
+          "summary": "Issue: On certain trucks, there may be a problem with the side airbag curtain inflators. As a result, the side airbag curtains may not inflate properly in a crash. Safety Risk: A side airbag curtain that does not inflate properly could increase the risk of injury in a crash. Corrective Actions: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealer to inspect and replace the side curtain airbag assemblies, as necessary."
+        },
+        {
+          "number": "2021720",
+          "date": "2021-11-23",
+          "system": "Visual System",
+          "manufacturerNumber": "Y80",
+          "summary": "Issue: On certain vehicles equipped with a trailer reverse steering module (TRSCM), the rearview camera image may not appear on the display when backing-up. Canadian regulations require the rearview image to display when the transmission is shifted into reverse gear. Safety Risk: A rearview camera image that does not display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Action: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealership to update the trailer reverse steering control module software."
+        },
+        {
+          "number": "2021362",
+          "date": "2021-06-10",
+          "system": "Other",
+          "manufacturerNumber": "Y30",
+          "summary": "Issue: On certain vehicles, a software problem could cause the rearview camera image not to appear on the display. Canadian regulations require the rearview image to display when the transmission is shifted into reverse gear. Note: This recall only affects vehicles equipped with a trailer reverse steering module (TRSCM). Safety Risk: A rearview camera image that does not display could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Action: FCA Canada will notify owners by mail and instruct you to take your vehicle to a dealer to update the trailer reverse steering module software."
+        },
+        {
+          "number": "2021156",
+          "date": "2021-03-16",
+          "system": "Brakes",
+          "manufacturerNumber": "Y14",
+          "summary": "Issue: On certain trucks, the brake pedal may be missing a clip to secure it to the master cylinder push rod. As a result, the brake pedal could separate and cause a loss of brakes. Note: This recall only affects RAM 1500 Classic trucks equipped with non-adjustable pedals. Safety Risk: A loss of brakes can create the risk of a crash. Corrective Actions: Fiat Chrysler Automobiles (FCA) will notify owners by mail and instruct you to take your truck to a dealer to inspect the retaining clip that secures the master cylinder push rod to the brake pedal. A new clip will be installed, if required. To reduce safety risk, FCA recommends that you should not drive your truck until you receive instructions on how to have this inspected."
+        }
+      ]
+    }
   },
   {
     "id": "2023-kia-telluride-ex",
@@ -725,9 +1500,6 @@
     "fuelHwy": 9.3,
     "colour": "Gravity Grey",
     "seats": 8,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 5,
     "features": [
       "Heated front seats",
@@ -789,9 +1561,101 @@
       ]
     },
     "sourceUrl": "https://www.cargurus.ca/Cars/l-Used-Kia-Telluride",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "KIA",
+      "models": [
+        "TELLURIDE"
+      ],
+      "year": 2023
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 9
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026327",
+          "date": "2026-07-03",
+          "system": "Electrical",
+          "manufacturerNumber": "RC227",
+          "summary": "Issue: On certain vehicles, the recall repairs completed by a Kia dealer during service campaign RC207 (Transport Canada recall number 2024-323) may not have been done correctly and/or may not be effective. As a result, another repair is required. Under certain conditions, the switch for the driver- and/or passenger-front power seat motor(s) could become stuck and cause the seat motor(s) not to stop. If this happens, the motor(s) could overheat. Note: This recall replaces Transport Canada recall no. 2024-323. Vehicles that were repaired under that recall also require this repair. Safety Risk: A seat motor that overheats can create a fire risk, even while the vehicle is parked and turned off. Corrective actions: To reduce the safety risk, Kia advises that you should park your vehicle outdoors and away from other vehicles or structures until the recall repairs have been completed. Kia will notify owners by mail and advise you to take your vehicle to a dealership to install an electronic fuse for the power seats."
+        },
+        {
+          "number": "2025400",
+          "date": "2025-07-30",
+          "system": "Structure",
+          "manufacturerNumber": "RC218",
+          "summary": "Issue: On certain vehicles, the exterior trim piece below the window on each door may not be properly attached. As a result, the face plate could loosen from the exterior trim pieces and separate from the vehicle. Safety Risk: Parts that detach from the vehicle could create a road hazard for others and increase the risk of a crash. Corrective Actions: Kia will notify owners by mail and advise you to take your vehicle to a dealership to replace the exterior trim piece below the window on each door."
+        },
+        {
+          "number": "2024549",
+          "date": "2024-08-15",
+          "system": "Label",
+          "manufacturerNumber": "INC003",
+          "summary": "Issue: On certain vehicles, the compliance label may be missing information in French. The words listed on the label for \"Tires\", \"Rims\", \"Front\" and \"Rear\" appear in English only, when they should be listed as \"Tires/Pneus\", \"Rims/Jantes\", \"Front/Avant\" and \"Rear/Arriere\". Canadian regulations require this information to be listed on the label in both English and French. Safety Risk: These small errors do not affect vehicle safety. Corrective Actions: This is not a recall. Kia has corrected the compliance label for all new vehicles."
+        },
+        {
+          "number": "2024323",
+          "date": "2024-06-06",
+          "system": "Electrical",
+          "manufacturerNumber": "RC207",
+          "summary": "Issue: Under certain conditions, the switch for the driver- and/or passenger-front power seat motor(s) could become stuck and cause the seat motor(s) not to stop. If this happens, the motor(s) could overheat. Safety Risk: A seat motor that overheats can create a fire risk, even while the vehicle is parked and turned off. Corrective actions: Kia advises that you should park your vehicle outdoors and away from other vehicles or structures until the recall repairs have been completed. Kia will notify owners by mail and advise you to take your vehicle to a dealership to install a bracket for the power seat switch cover(s). The dealer will also replace the seat adjustment knob(s)."
+        },
+        {
+          "number": "2024187",
+          "date": "2024-03-22",
+          "system": "Powertrain",
+          "manufacturerNumber": "RC202",
+          "summary": "Issue: On certain vehicles, the axle shaft(s) may not have been manufactured properly. As a result, the axle shaft(s) splines could become damaged. If this happens, the vehicle could move when it's parked and the parking brake isn't applied. Safety Risk: A parked vehicle that moves suddenly could create the risk of an injury or a crash. Corrective Actions: Kia will notify owners by mail and advise you to take your vehicle to a dealership to update the electronic parking brake software. To reduce the safety risk, Kia recommends that you should always use the parking brake when you park."
+        },
+        {
+          "number": "2023251",
+          "date": "2023-04-26",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "RC181",
+          "summary": "Issue: On certain vehicles, the instrument cluster screen could remain blank when the vehicle is started. If this happens, you may not be able to see certain information about the vehicle, including the odometer, warnings, and malfunction tell-tale graphics. Safety Risk: Warnings and malfunction tell-tale information that doesn't display could increase the risk of a crash. Corrective Actions: Kia will notify owners by mail and instruct you to take your vehicle to a dealership to update the instrument cluster software."
+        },
+        {
+          "number": "2023032",
+          "date": "2023-02-01",
+          "system": "Airbag",
+          "manufacturerNumber": "RC176",
+          "summary": "Issue: On certain vehicles, the wiring for the side airbags in the second-row seat cushion assembly may be too long. As a result, the wiring could be damaged by contact with the seat frame when the seat is folded or adjusted. If this happens, the second-row seat side airbag(s) may not work properly in a side-impact crash. Note: A damaged wiring harness can cause the airbag warning light to turn on. Safety Risk: An airbag that does not work properly could create an increased risk of injury in a crash. Corrective Action: Kia will notify owners by mail and instruct you to take your vehicle to a dealership to inspect the left and right second-row seat side airbag wire harnesses for damage. If damage is found, the wiring harness(es) will be replaced. If no damage is found, the wire harness(es) will be secured to avoid contact with the seat frame when the seat is folded or adjusted."
+        }
+      ]
+    }
   },
   {
     "id": "2020-volkswagen-golf-gti-autobahn",
@@ -818,9 +1682,6 @@
     "fuelHwy": 7.2,
     "colour": "Deep Black Pearl",
     "seats": 5,
-    "owners": 2,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 27,
     "features": [
       "Heated front seats",
@@ -866,9 +1727,82 @@
       ]
     },
     "sourceUrl": "https://www.autotrader.ca/cars/volkswagen/",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "VOLKSWAGEN",
+      "models": [
+        "GTI",
+        "GOLF"
+      ],
+      "year": 2020
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 2,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "AB",
+        "BC"
+      ],
+      "lastRegisteredProvince": "BC",
+      "serviceRecords": 8
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2024095",
+          "date": "2024-02-14",
+          "system": "Fuel System",
+          "manufacturerNumber": "20UF / 20YF",
+          "summary": "Issue: On certain vehicles, a seal for the suction jet pump inside the fuel tank could fail. As a result, fuel may flow directly into the evaporative emission control system (EVAP). If this happens, fuel could leak from the charcoal canister. Note: This problem could cause a fuel odor, the fuel nozzle to stop early and/or fuel to spill when refueling. Safety Risk: A fuel leak can create the risk of a fire. Corrective Actions: The company will notify owners by mail and advise you to take your vehicle to a dealership to replace the suction jet pump."
+        },
+        {
+          "number": "2021326",
+          "date": "2021-05-26",
+          "system": "Fabrics",
+          "manufacturerNumber": "34K4/34L8",
+          "summary": "Issue: On certain models, the chrome layer could peel off of the trim located around the gear shift cover. If this happens, sharp edges can be created. Safety Risk: Exposed sharp edges can create the risk of a cut. Corrective Actions: Volkswagen will contact owners by mail and instruct you to take your vehicle to a dealer to replace the gear shift cover trim frame."
+        },
+        {
+          "number": "2021014",
+          "date": "2021-01-20",
+          "system": "Brakes",
+          "manufacturerNumber": "47Q5",
+          "summary": "Issue: On certain vehicles, a front brake hose may be too long and could rub against the steering mechanism. This can cause damage to the hose that could result in a brake fluid leak. If this happens, a driver may have reduced braking. Safety Risk: Reduced braking can cause extended stopping distances and increase the risk of a crash. Corrective Actions: Volkswagen will notify owners by mail and instruct you to take your vehicle to a dealer to inspect the front brake hose. It will be replaced, if necessary."
+        },
+        {
+          "number": "2020275",
+          "date": "2020-06-17",
+          "system": "Brakes",
+          "manufacturerNumber": "47Q2",
+          "summary": "Issue: On certain vehicles, the front brake caliper mounting bolts may not be properly tightened. This could cause the bolts to loosen, which may result in reduced brake effectiveness. Safety Risk: Reduced brake effectiveness could cause an increase in stopping distance and create the risk of a crash. Corrective Actions: Volkswagen will notify owners and instruct you to take your vehicle to a dealer to replace the front brake caliper mounting bolts."
+        }
+      ]
+    }
   },
   {
     "id": "2021-chevrolet-bolt-ev-lt",
@@ -895,9 +1829,6 @@
     "evConsumption": 17.4,
     "colour": "Cherry Red",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 11,
     "features": [
       "Heated front seats",
@@ -948,9 +1879,87 @@
       ]
     },
     "sourceUrl": "https://www.clutch.ca/cars/chevrolet",
-    "carfaxNote": null,
     "fuelCity": null,
-    "fuelHwy": null
+    "fuelHwy": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "CHEVROLET",
+      "models": [
+        "BOLT EV"
+      ],
+      "year": 2021
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 11
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2024371",
+          "date": "2024-06-27",
+          "system": "High Voltage",
+          "manufacturerNumber": "N242443000 / N242443002",
+          "summary": "Issue: On certain vehicles, the recall repairs completed by a General Motors dealer during recall N212345941/N212345944 (Transport Canada recall no. 2021-524) may not have been done correctly. As a result, a second repair is required. On certain vehicles, the high-voltage battery could overheat when it is charged to over 90% of its capacity. As a result, the battery could create smoke or heat, which can melt or damage the battery and nearby parts. Safety Risk: A battery that overheats can create a fire risk. Corrective Actions: General Motors will notify owners by mail and advise you to take your vehicle to a dealership to install an advanced diagnostic software that will monitor the high-voltage battery and warn you if it detects a problem. If you see this warning, you should contact a dealership to arrange replacement of the affected high-voltage battery module. Please click here for additional information, including precautions to take until the recall repairs are completed, or call 1-800-263-3777 : <a href= https://my.gm.ca/chevrolet/en/how-to-support/safety/boltevrecall> https://my.gm.ca/chevrolet/en/how-to-support/safety/boltevrecall</a>"
+        },
+        {
+          "number": "2023664",
+          "date": "2023-12-14",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "N232421970/N232421971",
+          "summary": "Issue: On certain vehicles, the recall repairs may not have been completed by a General Motors dealer during recall N222383790 and/or N222383791 (Transport Canada recall number 2022-719). As a result, a second inspection is required. On certain vehicles, the carpet could catch fire after a crash where a front seat belt pretensioner deploys. Safety Risk: A fire that occurs after a crash could create an increased risk of injury. Corrective Actions: General Motors will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, install foil tape under the carpet near the front seatbelt pretensioners. On certain model year vehicles, the technician will also install seatbelt pretensioner covers."
+        },
+        {
+          "number": "2022719",
+          "date": "2022-12-15",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "N222383790 / N222383791",
+          "summary": "Issue: On certain vehicles, the carpet could catch fire after a crash where a front seat belt pretensioner deploys. Safety Risk: A fire that occurs after a crash could create an increased risk of injury. Corrective Actions: General Motors will notify owners by mail and instruct you to take your vehicle to a dealership to install foil tape under the carpet near the front seatbelt pretensioners. On certain model year vehicles, the technician will also install seatbelt pretensioner covers."
+        },
+        {
+          "number": "2021631",
+          "date": "2021-10-14",
+          "system": "Accessories",
+          "manufacturerNumber": "N212345450",
+          "summary": "Issue: This recall is for certain driver's all-weather floor liners sold with new vehicles or as accessory parts sold at General Motors dealerships. On certain vehicles, the accelerator pedal could get stuck on the floor liner. If this happens, the vehicle may not slow down when you release the accelerator pedal. Note: If you continue to push the brake pedal, the brake-override system will allow you to stop the vehicle. Safety Risk: A stuck accelerator pedal could lead to unintended acceleration and increase the risk of a crash. Corrective Actions: General Motors will notify owners by mail and instruct you to take your vehicle to a dealer to replace the driver's all-weather floor liner. You should remove the all-weather floor liner until you receive the replacement part."
+        },
+        {
+          "number": "2021524",
+          "date": "2021-08-20",
+          "system": "High Voltage",
+          "manufacturerNumber": "N212345940 / N212345944",
+          "summary": "Issue: On certain vehicles, the high-voltage battery could overheat when it is charged to over 90% of its capacity. As a result, the battery could create smoke or heat, which can melt or damage the battery and nearby parts. Safety Risk: A battery that overheats can create a fire risk. Corrective Actions: General Motors will notify owners by mail and advise you to take your vehicle to a dealership to install an advanced diagnostic software that will monitor the high-voltage battery and warn you if it detects a problem. If you see this warning, you should contact a dealership to arrange replacement of the affected high-voltage battery module. Please click here for additional information, including precautions to take until the recall repairs are completed, or call 1-800-263-3777 : <a href= https://my.gm.ca/chevrolet/en/how-to-support/safety/boltevrecall> https://my.gm.ca/chevrolet/en/how-to-support/safety/boltevrecall</a>"
+        }
+      ]
+    }
   },
   {
     "id": "2019-bmw-330i-xdrive",
@@ -977,9 +1986,6 @@
     "fuelHwy": 6.8,
     "colour": "Black Sapphire",
     "seats": 5,
-    "owners": 2,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 17,
     "features": [
       "Heated front seats",
@@ -1040,9 +2046,108 @@
       ]
     },
     "sourceUrl": "https://www.autotrader.ca/cars/bmw/",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "BMW",
+      "models": [
+        "3 SERIES"
+      ],
+      "year": 2019
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 2,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": true,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 12
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2025499",
+          "date": "2025-09-23",
+          "system": "Electrical",
+          "manufacturerNumber": "12 89 25RC",
+          "summary": "Issue: On certain vehicles, water could leak into the starter relay and cause it to corrode. If this happens, the relay could short circuit and the starter could overheat. Safety Risk: A short circuit and/or a starter that overheats can create a fire risk, even while the vehicle is parked and turned off. Corrective Actions: To reduce the safety risk, BMW advises that you should park your vehicle outdoors and away from other vehicles or structures until the recall repairs have been completed. BMW will notify owners by mail and advise you to take your vehicle to a dealership to replace the engine starter."
+        },
+        {
+          "number": "2024544",
+          "date": "2024-08-15",
+          "system": "Label",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the tire and loading information label does not list that there is no spare tire in both official languages. The label reads as \"NONE\" when it should read as \"NONE / AUCUN\". Canadian regulations require the information to be listed on the label in both English and French. Safety Risk: This error does not affect vehicle safety. Corrective Actions: This is not a recall. The company has corrected the tire and loading information label for all new vehicles."
+        },
+        {
+          "number": "2023463",
+          "date": "2023-08-16",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "65 88 23RC",
+          "summary": "Issue: On certain vehicles, the seat belt reminder chime may be delayed if you begin driving, and your your seat belt is not buckled. Canadian regulations require both a seat belt reminder sound and visual tell-tale when a driver is not wearing their seat belt. Safety Risk: A seat belt warning that doesn't work correctly may not remind you to buckle your seat before driving. Not wearing your seat belt can increase the risk of injury in a crash. Corrective Actions: BMW will notify owners by mail and advise you to take your vehicle to a dealership to update the Receiver Audio Module software."
+        },
+        {
+          "number": "2021078",
+          "date": "2021-02-18",
+          "system": "Visual System",
+          "manufacturerNumber": "66 80 21RC",
+          "summary": "Issue: On certain vehicles, a software problem could cause the rearview camera image not to appear correctly in the central display. Canadian regulations require the rearview image to display when the transmission is shifted into reverse gear. Safety Risk: A rearview camera image that does not display correctly could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: BMW will notify owners by mail and instruct you to take your vehicle to a dealer to update the rearview camera software, if necessary."
+        },
+        {
+          "number": "2020267",
+          "date": "2020-06-16",
+          "system": "Steering",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, high temperatures and excessive vibration could cause damage to the steering tie rods. If this happens, the tie rods could break. This could result in a loss of steering control. Safety Risk: A loss of steering control could create a risk of a crash. Corrective Actions: BMW will notify owners by mail and instruct you take your vehicle to a dealer to replace the steering tie rods."
+        },
+        {
+          "number": "2019480",
+          "date": "2019-10-01",
+          "system": "Visual System",
+          "manufacturerNumber": "66 82 19RC",
+          "summary": "Issue: On certain vehicles, the rearview camera does not return to the default settings when it turns on. This could make the rearview image difficult to see if a driver had previously adjusted the camera display brightness at or near the lowest setting, and contrast at or near the highest setting. Canadian regulations require that the rearview display returns to the default view each time the camera is turned on. Safety Risk: Reduced rear visibility could increase the risk of a crash. Corrective Actions: The company will notify owners by mail and instruct them to take their vehicle to a dealer to update the software for the rearview camera. Drivers are recommended not to adjust the display brightness at or near the lowest setting, and contrast at or near the highest setting, until this recall is completed."
+        },
+        {
+          "number": "2019220",
+          "date": "2019-05-09",
+          "system": "Airbag",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the driver and front passenger knee airbags were not assembled correctly. This could cause the airbags not to inflate properly in a crash. Safety Risk: A knee airbag that does not deploy properly could create an increased risk of injury in a crash. Corrective Actions: BMW will notify owners by mail and instruct them to take their vehicle to a dealer to replace the driver and/or front passenger knee airbag modules as required."
+        },
+        {
+          "number": "2018428",
+          "date": "2018-08-15",
+          "system": "Airbag",
+          "manufacturerNumber": null,
+          "summary": "Certain vehicles may have been built with a defective passenger front airbag. This could cause the airbag not to deploy properly in a crash, increasing the risk of injury to the seat occupant. Correction: Dealers will replace the passenger front airbag."
+        }
+      ]
+    }
   },
   {
     "id": "2022-ford-mustang-mach-e-select",
@@ -1069,9 +2174,6 @@
     "evConsumption": 21.6,
     "colour": "Rapid Red",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 7,
     "features": [
       "Heated front seats",
@@ -1103,9 +2205,108 @@
       "attention": []
     },
     "sourceUrl": "https://www.google.com/search?q=2022+Ford+Mustang+Mach-E+dealer+Calgary",
-    "carfaxNote": null,
     "fuelCity": null,
-    "fuelHwy": null
+    "fuelHwy": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "FORD",
+      "models": [
+        "MUSTANG MACH-E"
+      ],
+      "year": 2022
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "AB"
+      ],
+      "lastRegisteredProvince": "AB",
+      "serviceRecords": 10
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026317",
+          "date": "2026-06-30",
+          "system": "Powertrain",
+          "manufacturerNumber": "26S50",
+          "summary": "Issue: On certain vehicles, the differential pinion shaft could break and cause a loss of power to the wheels. This could also cause the vehicle to move when the transmission is in Park, if the parking brake is not used. Note: This recall only affects rear-wheel drive models. Safety Risk: A loss of power to the wheels could increase the risk of a crash. Additionally, a parked vehicle that moves suddenly could create the risk of an injury or a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to repair or replace the rear differential assembly, as necessary."
+        },
+        {
+          "number": "2025326",
+          "date": "2025-06-13",
+          "system": "Electrical",
+          "manufacturerNumber": "25S65",
+          "summary": "Issue: Under certain conditions, the electronic door latches could stay locked after the driver and/or front passenger exit the vehicle. As a result, you may not be able to open the doors from the outside, or an occupant that's unable to use the inside door handle(s) may not be able to exit the vehicle on their own. Safety Risk: Doors that can't be opened from the outside could delay emergency responders from entering the vehicle. This could also slow certain occupants from exiting the vehicle in an emergency. Both issues could increase the risk of injury. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to update the powertrain control module (PCM) and secondary on-board diagnostic control module (SOBDMC) software."
+        },
+        {
+          "number": "2025260",
+          "date": "2025-05-09",
+          "system": "Visual System",
+          "manufacturerNumber": "25S49",
+          "summary": "Issue: On certain vehicles, a software problem could cause the rearview camera image not to display or to freeze when the transmission is shifted into reverse. Safety Risk: A rearview camera image that doesn't display correctly could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and send a wireless over-the-air software update to eligible vehicles to update the SYNC software. Alternatively, you may schedule an appointment to have the update performed at a Ford dealership."
+        },
+        {
+          "number": "2025105",
+          "date": "2025-03-02",
+          "system": "High Voltage",
+          "manufacturerNumber": "25S14",
+          "summary": "Issue: On certain vehicles, the recall repairs completed by a Ford dealer during recall 22S41 (Transport Canada recall no. 2022-308) may not have been done correctly. As a result, a second repair is required. Under certain conditions, the main contactors for the high-voltage battery could overheat. If this happens, there could be a sudden loss of power to the wheels. Safety Risk: A loss of power to the wheels could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to update the secondary on-board diagnostic control module (SOBDCM) and battery energy control module (BECM) software."
+        },
+        {
+          "number": "2023554",
+          "date": "2023-10-17",
+          "system": "High Voltage",
+          "manufacturerNumber": "23S56",
+          "summary": "Issue: On certain vehicles, the software update completed by a Ford dealer during recall 22S41 (Transport Canada recall number 2022-308) may not be effective. As a result, a second repair is required. Under certain conditions, the main contactors for the high-voltage battery could overheat. If this happens, there could be a sudden loss of power to the wheels. Note: This recall only affects vehicles with the extended range battery package. Safety Risk: A loss of power to the wheels could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to replace the high-voltage battery junction box."
+        },
+        {
+          "number": "2022484",
+          "date": "2022-08-29",
+          "system": "Powertrain",
+          "manufacturerNumber": "22S55",
+          "summary": "Issue: On certain vehicles, the right-rear halfshaft may not have been manufactured properly. As a result, the right-rear halfshaft could fail and cause a loss of power to the rear wheels. Also, if this happens and the vehicle is parked without the parking brake on, the vehicle could roll away. Safety Risk: A loss of power to the wheels or a vehicle rollaway could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a dealership to inspect, and if necessary, replace the right-rear halfshaft. Ford advises that you should use the parking brake each time that you park the vehicle until the recall inspection/repair is completed."
+        },
+        {
+          "number": "2022308",
+          "date": "2022-06-10",
+          "system": "High Voltage",
+          "manufacturerNumber": "22S41",
+          "summary": "Issue: Under certain conditions, the main contactors for the high-voltage battery could overheat. If this happens, there could be a sudden loss of power to the wheels. Safety Risk: A loss of power to the wheels could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and send a wireless over-the-air software update to each vehicle. Alternatively, you may schedule an appointment to have the update performed at a Ford dealership."
+        },
+        {
+          "number": "2021768",
+          "date": "2021-12-17",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "21C36",
+          "summary": "Issue: On certain vehicles, the rear seat belt buckles could detach from the floor in a crash. Safety Risk: A seat belt that detaches in a crash could create an increased risk of injury. Corrective Actions: Ford will notify owners by mail and instruct you to take your vehicle to a dealer to repair the rear seat belt buckle attachments."
+        }
+      ]
+    }
   },
   {
     "id": "2022-toyota-tacoma-trd-off-road",
@@ -1132,9 +2333,6 @@
     "fuelHwy": 11.4,
     "colour": "Midnight Black",
     "seats": 5,
-    "owners": 1,
-    "accidents": 0,
-    "carfax": "No accidents",
     "listedDays": 1,
     "features": [
       "Heated front seats",
@@ -1179,8 +2377,58 @@
       ]
     },
     "sourceUrl": "https://www.clutch.ca/cars/toyota",
-    "carfaxNote": null,
     "evRange": null,
-    "evConsumption": null
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "TOYOTA",
+      "models": [
+        "TACOMA"
+      ],
+      "year": 2022
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "BC"
+      ],
+      "lastRegisteredProvince": "BC",
+      "serviceRecords": 10
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2024127",
+          "date": "2024-02-27",
+          "system": "Powertrain",
+          "manufacturerNumber": "SRC RG6",
+          "summary": "Issue: On certain trucks, the axle housing(s) may not have been manufactured properly. As a result, the axle retaining nuts could loosen and detach. If this happens, the axle shaft(s) could separate from the axle housing(s). This could cause reduced braking and/or reduced vehicle stability. Note: This problem could cause noise, vibration and/or a differential oil leak. Safety Risk: Reduced braking can cause extended stopping distances. Reduced vehicle stability could cause a loss of control. Both issues could increase the risk of a crash. Corrective Actions: Toyota will notify owners by mail and advise you to take your truck to a dealership to inspect the rear axle assembly and retighten the axle retaining nuts. If weld spatter is found, it will be removed. Any damaged axle components will be repaired or replaced, as necessary."
+        }
+      ]
+    }
   }
 ]

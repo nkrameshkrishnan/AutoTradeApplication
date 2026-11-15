@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Heart } from 'lucide-react';
+import { Heart, ShieldAlert, ShieldCheck } from 'lucide-react';
 import { useStore, MAX_COMPARE } from '../lib/store.jsx';
 import { calculateFinance } from '../lib/finance.js';
 import { asset, km, money, place, title } from '../lib/format.js';
 import { PricePosition, RatingBadge } from './ui.jsx';
 import { EASE } from './motion.jsx';
+import { accidentLabel, isClean, ownersLabel } from '../lib/history.js';
 
 export function SaveButton({ id, name, className = '' }) {
   const { saved, toggleSaved } = useStore();
@@ -92,6 +93,15 @@ export default function VehicleCard({ v }) {
         </div>
         <p className="num mt-1 text-[13px] text-muted">
           {km(v.odometer)} · {place(v)}
+        </p>
+        <p className="mt-1 flex items-center gap-1.5 text-[13px]">
+          {isClean(v.history) ? (
+            <ShieldCheck size={14} strokeWidth={1.8} className="flex-none text-positive" aria-hidden="true" />
+          ) : (
+            <ShieldAlert size={14} strokeWidth={1.8} className="flex-none text-warn-ink" aria-hidden="true" />
+          )}
+          <span className={isClean(v.history) ? 'text-ink' : 'text-warn-ink'}>{accidentLabel(v.history)}</span>
+          <span className="text-muted">· {ownersLabel(v.history)}</span>
         </p>
 
         <div className="mt-4 mb-4">

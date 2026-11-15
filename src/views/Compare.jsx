@@ -7,6 +7,7 @@ import { Reveal, PressButton } from '../components/motion.jsx';
 import { useStore, MAX_COMPARE } from '../lib/store.jsx';
 import { calculateFinance, priceRating } from '../lib/finance.js';
 import { asset, km, money, signedMoney, title } from '../lib/format.js';
+import { accidentLabel, isClean, nonPersonal } from '../lib/history.js';
 
 function pill(cls, text) {
   return <span className={`inline-flex h-6 flex-none items-center whitespace-nowrap rounded-full px-2.5 text-xs font-medium ${cls}`}>{text}</span>;
@@ -56,11 +57,17 @@ function buildSections(cars, finance) {
         { label: 'Odometer', key: (c) => c.odometer, show: (c) => km(c.odometer), best: 'min' },
         { label: 'Model year', key: (c) => c.year, show: (c) => String(c.year), best: 'max', bestLabel: 'Newest' },
         {
-          label: 'Carfax',
-          key: (c) => c.carfax,
-          show: (c) => (c.accidents === 0 ? pill('bg-pos-bg text-pos-ink', c.carfax) : pill('bg-warn-bg text-warn-ink', c.carfax)),
+          label: 'CARFAX Canada',
+          key: (c) => accidentLabel(c.history),
+          show: (c) => (isClean(c.history) ? pill('bg-pos-bg text-pos-ink', accidentLabel(c.history)) : pill('bg-warn-bg text-warn-ink', accidentLabel(c.history))),
         },
-        { label: 'Previous owners', key: (c) => c.owners, show: (c) => String(c.owners), best: 'min', bestLabel: 'Fewest' },
+        { label: 'Reported claims', key: (c) => c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0), show: (c) => (c.history.accidents.length ? money(c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0)) : money(0)), best: 'min' },
+        { label: 'Previous owners', key: (c) => c.history.owners, show: (c) => (c.history.owners == null ? '—' : String(c.history.owners)), best: 'min', bestLabel: 'Fewest' },
+        { label: 'Title brand', key: (c) => c.history.titleBrand, show: (c) => c.history.titleBrand },
+        { label: 'Use', key: (c) => nonPersonal(c.history).join(', ') || 'Personal', show: (c) => (nonPersonal(c.history).length ? `${nonPersonal(c.history).join(', ')}, then personal` : 'Personal') },
+        { label: 'Registered in', key: (c) => (c.history.registrations ?? []).join(', '), show: (c) => (c.history.registrations ?? []).join(', ') || '—' },
+        { label: 'Service records', key: (c) => c.history.serviceRecords, show: (c) => (c.history.serviceRecords == null ? '—' : String(c.history.serviceRecords)), best: 'max', bestLabel: 'Most' },
+        { label: 'Model-year recalls', key: (c) => c.recalls?.items.length ?? null, show: (c) => (c.recalls ? String(c.recalls.items.length) : '—'), best: 'min', bestLabel: 'Fewest' },
         { label: 'Inspection notes', key: (c) => c.inspection.attention.length, show: (c) => `${c.inspection.attention.length} of 150 points`, best: 'min', bestLabel: 'Fewest' },
       ],
     },

@@ -56,7 +56,7 @@ function ActiveChips({ filters, setFilters }) {
   if (filters.yearMin !== BOUNDS.yearMin || filters.yearMax !== BOUNDS.yearMax)
     chips.push({ key: 'year', label: `${filters.yearMin}–${filters.yearMax}`, clear: (f) => ({ ...f, yearMin: BOUNDS.yearMin, yearMax: BOUNDS.yearMax }) });
   if (filters.kmMax !== BOUNDS.kmMax) chips.push({ key: 'km', label: `Up to ${num(filters.kmMax)} km`, clear: (f) => ({ ...f, kmMax: BOUNDS.kmMax }) });
-  for (const facet of ['transmission', 'drivetrain', 'fuel', 'source'])
+  for (const facet of ['history', 'transmission', 'drivetrain', 'fuel', 'source'])
     for (const o of filters[facet]) chips.push({ key: facet + o, label: o, clear: (f) => ({ ...f, [facet]: f[facet].filter((x) => x !== o) }) });
   if (!chips.length) return null;
   return (

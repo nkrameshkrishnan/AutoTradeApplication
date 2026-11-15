@@ -29,6 +29,25 @@ It works from any sub-path (`username.github.io/<repo>/`) because `vite.config.j
 - **Persistence**: compare list, saved cars and calculator settings live in `localStorage` (`kilometre.*.v1`).
 - **Motion**: one ease (`cubic-bezier(0.22, 1, 0.36, 1)`), entrances only on first load and on scroll, quick press/hover feedback, tray and drawers that slide; filtering is instant. `prefers-reduced-motion` drops all travel.
 
+## Vehicle history (CARFAX Canada) and recalls
+
+Each listing carries a `history` record shaped after CARFAX Canada's VIN Scan fields (accidents with dates and claims, owners, title brand, total loss, frame damage, airbag, fire/flood, stolen, odometer problems, US history, use, registrations, service records), a `reportUrl`, and a `recalls` list. The vehicle page shows them in **Vehicle history** and **Safety recalls**; cards show the accident and owner summary; Compare adds history rows; the filters add **Vehicle history** (no reported accidents, one owner, personal use only).
+
+The site never fetches CARFAX in the browser: keys would be public and the sites block cross-origin requests. The CARFAX terms of use also prohibit robots and data mining. Data is refreshed at build time instead:
+
+```bash
+npm run enrich   # recalls, plus CARFAX if configured
+npm test         # pipeline tests (CSV parser, CARFAX mapping, secret handling)
+```
+
+`.github/workflows/refresh-data.yml` runs every Monday (and on demand). It refreshes `src/data/vehicles.json`, commits it if anything changed, and redeploys.
+
+- **Recalls** come from Transport Canada's Motor Vehicle Safety Recalls Database (open data, no key). Each car's `recallQuery` names its make, model names as Transport Canada spells them, and model year. Matching is by model year, so the page tells buyers to confirm by VIN with the manufacturer.
+- **CARFAX Canada** needs a business API agreement ([VIN Scan Summary or the VHR Order/Look-up API](https://go.carfax.ca/big-solutions)). Once you have it, add repository secrets `CARFAX_API_URL` (a URL template containing `{vin}`) and `CARFAX_API_KEY`, and optionally the variable `CARFAX_AUTH_HEADER` (default `Authorization: Bearer <key>`). `scripts/providers/carfax.mjs` reads fields by their data-dictionary labels; check its `LABELS` map against the response CARFAX sends you. Only listings with a real 17-character `vin` are looked up, so sample listings (`vin: null`) never trigger a paid report.
+- **Report links**: put the CARFAX report URL the seller gives on Clutch or AutoTrader into `history.reportUrl` (with `history.source: "listing"`); the page shows an **Open CARFAX Canada report** button.
+
+The 15 sample listings have invented histories (`history.source: "sample"`) and real, current recall lists for their model years.
+
 ## Data
 
 `src/data/vehicles.json` holds 15 **sample** listings across Toronto, Ottawa, Montreal, Calgary and Vancouver, from Clutch, AutoTrader, CarGurus and dealers. Prices, kilometres, market averages, owners, accident notes and inspection notes are invented for demonstration; specs and fuel figures are close to published values but should be checked before any real use. "View original source listing" opens a search on the named platform, not a real listing.
