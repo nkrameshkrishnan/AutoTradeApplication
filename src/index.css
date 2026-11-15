@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Achromatic ledger: ink chrome, one data hue (#1d5fbf) on the price-position marker,
+   status only as pale pill pairs. Ground tinted blue-grey, like asphalt under daylight. */
+@theme {
+  --font-sans: "Geist", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ground: #f2f4f7;
+  --color-surface: #ffffff;
+  --color-raised: #eef0f3;
+  --color-active: #e4e7eb;
+  --color-line: #e3e6ea;
+  --color-rule: #eff1f3;
+  --color-control: #cfd4da;
+  --color-ink: #0a0a0a;
+  --color-muted: #5f646b;
+  --color-primary: #141414;
+  --color-data: #1d5fbf;
+  --color-data-pale: #e3ecf8;
+  --color-positive: #24703a;
+  --color-negative: #c4242a;
+
+  --color-pos-bg: #dcfae5;
+  --color-pos-ink: #04250e;
+  --color-warn-bg: #fff4e0;
+  --color-warn-ink: #8a3d0a;
+  --color-neu-bg: #eceef1;
+  --color-neu-ink: #34383d;
+
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.125rem;
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: light;
+  --tray-h: 0px;
+}
+
+html {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scrollbar-color: #c3c8cf transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 100dvh;
+  caret-color: var(--color-data);
+}
+
+::selection {
+  background: #cfdcf1;
+  color: var(--color-ink);
+}
+
+/* Browser surfaces carry the design too. */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #c9ced5; border-radius: 999px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: #aab0b8; background-clip: content-box; border: 3px solid transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+
+:focus-visible {
+  outline: 2px solid var(--color-data);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+
+a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+/* Range inputs: a thin ink track with a white thumb, tuned for thumbs on a phone. */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-control);
+}
+input[type="range"]::-moz-range-track { height: 4px; border-radius: 999px; background: var(--color-control); }
+input[type="range"]::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--color-ink); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px; height: 18px; margin-top: -7px;
+  border-radius: 999px; background: #fff;
+  border: 1.5px solid var(--color-ink);
+  transition: transform 150ms var(--ease-out-expo);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 999px; background: #fff; border: 1.5px solid var(--color-ink);
+}
+input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+input[type="range"]:focus-visible { outline-offset: 4px; }
+
+/* Two overlaid ranges make one two-thumb slider; only the thumbs take the pointer. */
+input[type="range"].dual { pointer-events: none; }
+input[type="range"].dual::-webkit-slider-runnable-track { background: transparent; }
+input[type="range"].dual::-moz-range-track { background: transparent; }
+input[type="range"].dual::-moz-range-progress { background: transparent; }
+input[type="range"].dual::-webkit-slider-thumb { pointer-events: auto; }
+input[type="range"].dual::-moz-range-thumb { pointer-events: auto; }
+
+/* Number fields without browser spinners. */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+
+/* Checkbox in ink. */
+input[type="checkbox"] { accent-color: var(--color-ink); }
+
+.scroll-x { overflow-x: auto; scrollbar-width: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

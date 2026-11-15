@@ -1,0 +1,1186 @@
+[
+  {
+    "id": "2021-toyota-rav4-xle",
+    "year": 2021,
+    "make": "Toyota",
+    "model": "RAV4",
+    "trim": "XLE AWD",
+    "bodyType": "SUV",
+    "price": 33990,
+    "marketAvg": 34900,
+    "marketLow": 30500,
+    "marketHigh": 38900,
+    "odometer": 48200,
+    "city": "Toronto",
+    "province": "ON",
+    "source": "Clutch",
+    "engine": "2.5L 4-cylinder",
+    "horsepower": 203,
+    "transmission": "Automatic",
+    "transmissionDetail": "8-speed automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Gas",
+    "fuelCity": 8.4,
+    "fuelHwy": 6.8,
+    "colour": "Blizzard Pearl",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 4,
+    "features": [
+      "Heated front seats",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Remote start",
+      "Power liftgate"
+    ],
+    "images": [
+      {
+        "src": "images/rav4-1.jpg",
+        "alt": "2021 Toyota RAV4 XLE AWD",
+        "credit": {
+          "title": "2021 Toyota RAV4 XLE AWD, front right, 05-24-2026",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Toyota_RAV4_XLE_AWD,_front_right,_05-24-2026.jpg"
+        }
+      },
+      {
+        "src": "images/rav4-2.jpg",
+        "alt": "2021 Toyota RAV4 XLE AWD",
+        "credit": {
+          "title": "2021 Toyota RAV4 XLE AWD, rear right, 05-24-2026",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Toyota_RAV4_XLE_AWD,_rear_right,_05-24-2026.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Tires & brakes",
+          "item": "Rear pads at 5 mm",
+          "outcome": "Within spec"
+        },
+        {
+          "area": "Exterior",
+          "item": "Stone chip, hood leading edge",
+          "outcome": "Touched up"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/toyota",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2022-honda-civic-ex",
+    "year": 2022,
+    "make": "Honda",
+    "model": "Civic",
+    "trim": "EX Sedan",
+    "bodyType": "Sedan",
+    "price": 27450,
+    "marketAvg": 28100,
+    "marketLow": 25200,
+    "marketHigh": 31400,
+    "odometer": 31500,
+    "city": "Ottawa",
+    "province": "ON",
+    "source": "AutoTrader",
+    "engine": "2.0L 4-cylinder",
+    "horsepower": 158,
+    "transmission": "Automatic",
+    "transmissionDetail": "CVT automatic",
+    "drivetrain": "FWD",
+    "fuelType": "Gas",
+    "fuelCity": 7.2,
+    "fuelHwy": 5.7,
+    "colour": "Rallye Red",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 9,
+    "features": [
+      "Heated front seats",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/civic-1.jpg",
+        "alt": "2022 Honda Civic EX Sedan",
+        "credit": {
+          "title": "2022 Honda Civic LX Sedan, front right, 11-02-2022",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2022_Honda_Civic_LX_Sedan,_front_right,_11-02-2022.jpg"
+        }
+      },
+      {
+        "src": "images/civic-2.jpg",
+        "alt": "2022 Honda Civic EX Sedan",
+        "credit": {
+          "title": "HONDA CIVIC SEDAN (FE,FL) China",
+          "creator": "Dinkun Chen",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:HONDA_CIVIC_SEDAN_(FE,FL)_China.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Interior",
+          "item": "Driver floor mat worn",
+          "outcome": "Replaced"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/honda/",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2020-ford-f150-xlt",
+    "year": 2020,
+    "make": "Ford",
+    "model": "F-150",
+    "trim": "XLT SuperCrew 4x4",
+    "bodyType": "Truck",
+    "price": 41900,
+    "marketAvg": 45200,
+    "marketLow": 38800,
+    "marketHigh": 51900,
+    "odometer": 78400,
+    "city": "Calgary",
+    "province": "AB",
+    "source": "Dealer Direct",
+    "engine": "2.7L V6 EcoBoost",
+    "horsepower": 325,
+    "transmission": "Automatic",
+    "transmissionDetail": "10-speed automatic",
+    "drivetrain": "4WD",
+    "fuelType": "Gas",
+    "fuelCity": 12.6,
+    "fuelHwy": 9.6,
+    "colour": "Iconic Silver",
+    "seats": 5,
+    "owners": 2,
+    "accidents": 1,
+    "carfax": "1 minor accident",
+    "carfaxNote": "Rear bumper, 2022 · $1,840 claim",
+    "listedDays": 12,
+    "features": [
+      "Heated front seats",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Remote start",
+      "Tow package",
+      "Built-in navigation"
+    ],
+    "images": [
+      {
+        "src": "images/f150-1.jpg",
+        "alt": "2020 Ford F-150 XLT SuperCrew 4x4",
+        "credit": {
+          "title": "2020 Ford F-150 XLT SuperCrew 4x4 with FX4 Off-Road & Chrome Packages, front left, 04-07-2023",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020_Ford_F-150_XLT_SuperCrew_4x4_with_FX4_Off-Road_%26_Chrome_Packages,_front_left,_04-07-2023.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Undercarriage",
+          "item": "Surface rust on frame rails",
+          "outcome": "Treated"
+        },
+        {
+          "area": "Tires & brakes",
+          "item": "Front tires at 5/32\"",
+          "outcome": "Replaced"
+        },
+        {
+          "area": "Exterior",
+          "item": "Bed liner scuffing",
+          "outcome": "Cosmetic only"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.google.com/search?q=2020+Ford+F-150+dealer+Calgary",
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2022-tesla-model-3-long-range",
+    "year": 2022,
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range AWD",
+    "bodyType": "Sedan",
+    "price": 43800,
+    "marketAvg": 42500,
+    "marketLow": 38900,
+    "marketHigh": 47200,
+    "odometer": 39000,
+    "city": "Vancouver",
+    "province": "BC",
+    "source": "CarGurus",
+    "engine": "Dual electric motors",
+    "horsepower": 346,
+    "transmission": "Automatic",
+    "transmissionDetail": "Single-speed",
+    "drivetrain": "AWD",
+    "fuelType": "Electric",
+    "evRange": 568,
+    "evConsumption": 16.1,
+    "colour": "Cream (wrapped)",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 6,
+    "features": [
+      "Heated front seats",
+      "Heated rear seats",
+      "Panoramic sunroof",
+      "Adaptive cruise control",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "360° camera",
+      "Leather seats",
+      "Wireless charging",
+      "Built-in navigation",
+      "Premium audio"
+    ],
+    "images": [
+      {
+        "src": "images/model3-1.jpg",
+        "alt": "2022 Tesla Model 3 Long Range AWD",
+        "credit": {
+          "title": "Tesla Model 3 Shishi 01 2022-09-06",
+          "creator": "JamesYoung8167",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_Shishi_01_2022-09-06.jpg"
+        }
+      },
+      {
+        "src": "images/model3-2.jpg",
+        "alt": "2022 Tesla Model 3 Long Range AWD",
+        "credit": {
+          "title": "Tesla Model 3 Shishi 02 2022-09-06",
+          "creator": "JamesYoung8167",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_Shishi_02_2022-09-06.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Exterior",
+          "item": "Wrap lifting at rear bumper corner",
+          "outcome": "Resealed"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.cargurus.ca/Cars/l-Used-Tesla-Model-3",
+    "carfaxNote": null,
+    "fuelCity": null,
+    "fuelHwy": null
+  },
+  {
+    "id": "2019-mazda-mazda3-sport-gs",
+    "year": 2019,
+    "make": "Mazda",
+    "model": "Mazda3 Sport",
+    "trim": "GS",
+    "bodyType": "Hatchback",
+    "price": 19750,
+    "marketAvg": 21600,
+    "marketLow": 18400,
+    "marketHigh": 24300,
+    "odometer": 62300,
+    "city": "Montreal",
+    "province": "QC",
+    "source": "Clutch",
+    "engine": "2.5L 4-cylinder",
+    "horsepower": 186,
+    "transmission": "Manual",
+    "transmissionDetail": "6-speed manual",
+    "drivetrain": "FWD",
+    "fuelType": "Gas",
+    "fuelCity": 8.9,
+    "fuelHwy": 6.6,
+    "colour": "Snowflake White Pearl",
+    "seats": 5,
+    "owners": 2,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 2,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist"
+    ],
+    "images": [
+      {
+        "src": "images/mazda3-1.jpg",
+        "alt": "2019 Mazda Mazda3 Sport GS",
+        "credit": {
+          "title": "2019 Mazda3 Hatchback 2.0 BP (20191219) 01",
+          "creator": "オーバードライブ83",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Mazda3_Hatchback_2.0_BP_(20191219)_01.jpg"
+        }
+      },
+      {
+        "src": "images/mazda3-2.jpg",
+        "alt": "2019 Mazda Mazda3 Sport GS",
+        "credit": {
+          "title": "2019 Mazda3 Hatchback 2.0 BP (20191219) 02",
+          "creator": "オーバードライブ83",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Mazda3_Hatchback_2.0_BP_(20191219)_02.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Road test",
+          "item": "Clutch engagement high but smooth",
+          "outcome": "Within spec"
+        },
+        {
+          "area": "Tires & brakes",
+          "item": "Winter set included, 7/32\"",
+          "outcome": "Noted"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/mazda",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2021-hyundai-kona-electric-preferred",
+    "year": 2021,
+    "make": "Hyundai",
+    "model": "Kona Electric",
+    "trim": "Preferred",
+    "bodyType": "SUV",
+    "price": 29990,
+    "marketAvg": 31200,
+    "marketLow": 27500,
+    "marketHigh": 34600,
+    "odometer": 28700,
+    "city": "Montreal",
+    "province": "QC",
+    "source": "AutoTrader",
+    "engine": "150 kW electric motor",
+    "horsepower": 201,
+    "transmission": "Automatic",
+    "transmissionDetail": "Single-speed",
+    "drivetrain": "FWD",
+    "fuelType": "Electric",
+    "evRange": 415,
+    "evConsumption": 16.9,
+    "colour": "Ceramic Blue",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 15,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Wireless charging"
+    ],
+    "images": [
+      {
+        "src": "images/kona-1.jpg",
+        "alt": "2021 Hyundai Kona Electric Preferred",
+        "credit": {
+          "title": "2019 Hyundai Kona Electric front charging 4.2.18",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Hyundai_Kona_Electric_front_charging_4.2.18.jpg"
+        }
+      },
+      {
+        "src": "images/kona-2.jpg",
+        "alt": "2021 Hyundai Kona Electric Preferred",
+        "credit": {
+          "title": "2019 Hyundai Kona Electric rear charging 4.2.18",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Hyundai_Kona_Electric_rear_charging_4.2.18.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Electrical",
+          "item": "Battery state of health 96%",
+          "outcome": "Within spec"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/hyundai/",
+    "carfaxNote": null,
+    "fuelCity": null,
+    "fuelHwy": null
+  },
+  {
+    "id": "2020-subaru-outback-touring",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Outback",
+    "trim": "Touring",
+    "bodyType": "SUV",
+    "price": 28400,
+    "marketAvg": 29300,
+    "marketLow": 25900,
+    "marketHigh": 32800,
+    "odometer": 71000,
+    "city": "Calgary",
+    "province": "AB",
+    "source": "Clutch",
+    "engine": "2.5L flat-4",
+    "horsepower": 182,
+    "transmission": "Automatic",
+    "transmissionDetail": "CVT automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Gas",
+    "fuelCity": 9.0,
+    "fuelHwy": 7.1,
+    "colour": "Ice Silver Metallic",
+    "seats": 5,
+    "owners": 2,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 21,
+    "features": [
+      "Heated front seats",
+      "Heated rear seats",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Power liftgate",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/outback-1.jpg",
+        "alt": "2020 Subaru Outback Touring",
+        "credit": {
+          "title": "2020 Subaru Outback AWD, front",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020_Subaru_Outback_AWD,_front.jpg"
+        }
+      },
+      {
+        "src": "images/outback-2.jpg",
+        "alt": "2020 Subaru Outback Touring",
+        "credit": {
+          "title": "2020 Subaru Outback AWD, rear",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2020_Subaru_Outback_AWD,_rear.jpg"
+        }
+      },
+      {
+        "src": "images/outback-3.jpg",
+        "alt": "2020 Subaru Outback Touring",
+        "credit": {
+          "title": "Chicago Auto Show 2020. Subaru Outback (49505164238)",
+          "creator": "Kontinent Media",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Chicago_Auto_Show_2020._Subaru_Outback_(49505164238).jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Under hood",
+          "item": "CVT fluid service due at 96,000 km",
+          "outcome": "Noted"
+        },
+        {
+          "area": "Exterior",
+          "item": "Roof rail crossbars missing",
+          "outcome": "Noted"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/subaru",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2023-toyota-camry-hybrid-se",
+    "year": 2023,
+    "make": "Toyota",
+    "model": "Camry Hybrid",
+    "trim": "SE",
+    "bodyType": "Sedan",
+    "price": 36200,
+    "marketAvg": 35400,
+    "marketLow": 33100,
+    "marketHigh": 38700,
+    "odometer": 18900,
+    "city": "Toronto",
+    "province": "ON",
+    "source": "Dealer Direct",
+    "engine": "2.5L 4-cylinder hybrid",
+    "horsepower": 208,
+    "transmission": "Automatic",
+    "transmissionDetail": "eCVT automatic",
+    "drivetrain": "FWD",
+    "fuelType": "Hybrid",
+    "fuelCity": 5.1,
+    "fuelHwy": 4.9,
+    "colour": "Wind Chill Pearl",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 3,
+    "features": [
+      "Heated front seats",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Wireless charging"
+    ],
+    "images": [
+      {
+        "src": "images/camry-1.jpg",
+        "alt": "2023 Toyota Camry Hybrid SE",
+        "credit": {
+          "title": "TOYOTA CAMRY HYBRID (XV70) China (10)",
+          "creator": "Dinkun Chen",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_CAMRY_HYBRID_(XV70)_China_(10).jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": []
+    },
+    "sourceUrl": "https://www.google.com/search?q=2023+Toyota+Camry+Hybrid+dealer+Toronto",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2021-ram-1500-big-horn",
+    "year": 2021,
+    "make": "Ram",
+    "model": "1500",
+    "trim": "Big Horn Crew Cab 4x4",
+    "bodyType": "Truck",
+    "price": 44500,
+    "marketAvg": 47900,
+    "marketLow": 41200,
+    "marketHigh": 54500,
+    "odometer": 55600,
+    "city": "Ottawa",
+    "province": "ON",
+    "source": "AutoTrader",
+    "engine": "5.7L V8 HEMI eTorque",
+    "horsepower": 395,
+    "transmission": "Automatic",
+    "transmissionDetail": "8-speed automatic",
+    "drivetrain": "4WD",
+    "fuelType": "Gas",
+    "fuelCity": 14.2,
+    "fuelHwy": 10.4,
+    "colour": "Bright White",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 1,
+    "carfax": "1 minor accident",
+    "carfaxNote": "Front fender, 2023 · $2,310 claim",
+    "listedDays": 8,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Remote start",
+      "Tow package",
+      "Built-in navigation",
+      "Power liftgate"
+    ],
+    "images": [
+      {
+        "src": "images/ram1500-1.jpg",
+        "alt": "2021 Ram 1500 Big Horn Crew Cab 4x4",
+        "credit": {
+          "title": "2019 Ram 1500 Bighorn, front 3.11.20",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Ram_1500_Bighorn,_front_3.11.20.jpg"
+        }
+      },
+      {
+        "src": "images/ram1500-2.jpg",
+        "alt": "2021 Ram 1500 Big Horn Crew Cab 4x4",
+        "credit": {
+          "title": "2019 Ram 1500 Bighorn, rear 3.11.20",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2019_Ram_1500_Bighorn,_rear_3.11.20.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Exterior",
+          "item": "Paint depth differs on front fender",
+          "outcome": "Prior repair"
+        },
+        {
+          "area": "Undercarriage",
+          "item": "Tow hitch receiver worn",
+          "outcome": "Within spec"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/ram/",
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2023-kia-telluride-ex",
+    "year": 2023,
+    "make": "Kia",
+    "model": "Telluride",
+    "trim": "EX AWD",
+    "bodyType": "SUV",
+    "price": 46900,
+    "marketAvg": 45800,
+    "marketLow": 42900,
+    "marketHigh": 50500,
+    "odometer": 41200,
+    "city": "Toronto",
+    "province": "ON",
+    "source": "CarGurus",
+    "engine": "3.8L V6",
+    "horsepower": 291,
+    "transmission": "Automatic",
+    "transmissionDetail": "8-speed automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Gas",
+    "fuelCity": 12.1,
+    "fuelHwy": 9.3,
+    "colour": "Gravity Grey",
+    "seats": 8,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 5,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Heated rear seats",
+      "Ventilated front seats",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Leather seats",
+      "Wireless charging",
+      "Power liftgate",
+      "Third-row seating",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/telluride-1.jpg",
+        "alt": "2023 Kia Telluride EX AWD",
+        "credit": {
+          "title": "2023 Kia Telluride front end",
+          "creator": "deathpallie325",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Kia_Telluride_front_end.jpg"
+        }
+      },
+      {
+        "src": "images/telluride-2.jpg",
+        "alt": "2023 Kia Telluride EX AWD",
+        "credit": {
+          "title": "2023 Kia Telluride rear end",
+          "creator": "deathpallie325",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Kia_Telluride_rear_end.jpg"
+        }
+      },
+      {
+        "src": "images/telluride-3.jpg",
+        "alt": "2023 Kia Telluride EX AWD",
+        "credit": {
+          "title": "2023 Kia Telluride interior",
+          "creator": "deathpallie325",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Kia_Telluride_interior.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Interior",
+          "item": "Second-row seat trim scuffed",
+          "outcome": "Cosmetic only"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.cargurus.ca/Cars/l-Used-Kia-Telluride",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2020-volkswagen-golf-gti-autobahn",
+    "year": 2020,
+    "make": "Volkswagen",
+    "model": "Golf GTI",
+    "trim": "Autobahn",
+    "bodyType": "Hatchback",
+    "price": 28900,
+    "marketAvg": 27200,
+    "marketLow": 24800,
+    "marketHigh": 30500,
+    "odometer": 49800,
+    "city": "Vancouver",
+    "province": "BC",
+    "source": "AutoTrader",
+    "engine": "2.0L turbo 4-cylinder",
+    "horsepower": 228,
+    "transmission": "Manual",
+    "transmissionDetail": "6-speed manual",
+    "drivetrain": "FWD",
+    "fuelType": "Gas",
+    "fuelCity": 9.6,
+    "fuelHwy": 7.2,
+    "colour": "Deep Black Pearl",
+    "seats": 5,
+    "owners": 2,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 27,
+    "features": [
+      "Heated front seats",
+      "Panoramic sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Leather seats",
+      "Built-in navigation",
+      "Premium audio"
+    ],
+    "images": [
+      {
+        "src": "images/gti-1.jpg",
+        "alt": "2020 Volkswagen Golf GTI Autobahn",
+        "credit": {
+          "title": "Volkswagen Golf GTI Mk7 Deep Black Pearl (1)",
+          "creator": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_GTI_Mk7_Deep_Black_Pearl_(1).jpg"
+        }
+      },
+      {
+        "src": "images/gti-2.jpg",
+        "alt": "2020 Volkswagen Golf GTI Autobahn",
+        "credit": {
+          "title": "Volkswagen Golf GTI Mk7 Deep Black Pearl (3)",
+          "creator": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_GTI_Mk7_Deep_Black_Pearl_(3).jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Tires & brakes",
+          "item": "Front rotors lipped",
+          "outcome": "Resurfaced"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/volkswagen/",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2021-chevrolet-bolt-ev-lt",
+    "year": 2021,
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "LT",
+    "bodyType": "Hatchback",
+    "price": 24500,
+    "marketAvg": 26400,
+    "marketLow": 22900,
+    "marketHigh": 29800,
+    "odometer": 34100,
+    "city": "Ottawa",
+    "province": "ON",
+    "source": "Clutch",
+    "engine": "150 kW electric motor",
+    "horsepower": 200,
+    "transmission": "Automatic",
+    "transmissionDetail": "Single-speed",
+    "drivetrain": "FWD",
+    "fuelType": "Electric",
+    "evRange": 417,
+    "evConsumption": 17.4,
+    "colour": "Cherry Red",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 11,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Apple CarPlay",
+      "Android Auto"
+    ],
+    "images": [
+      {
+        "src": "images/bolt-1.jpg",
+        "alt": "2021 Chevrolet Bolt EV LT",
+        "credit": {
+          "title": "2021 Chevy Bolt EV 20210730 (1)",
+          "creator": "Robert T Bell",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Chevy_Bolt_EV_20210730_(1).jpg"
+        }
+      },
+      {
+        "src": "images/bolt-2.jpg",
+        "alt": "2021 Chevrolet Bolt EV LT",
+        "credit": {
+          "title": "2021 Chevy Bolt EV 20210730 (2)",
+          "creator": "Robert T Bell",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Chevy_Bolt_EV_20210730_(2).jpg"
+        }
+      },
+      {
+        "src": "images/bolt-3.jpg",
+        "alt": "2021 Chevrolet Bolt EV LT",
+        "credit": {
+          "title": "2021 Chevrolet Bolt EV interior",
+          "creator": "deathpallie325",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2021_Chevrolet_Bolt_EV_interior.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Electrical",
+          "item": "Battery recall completed, new pack 2022",
+          "outcome": "Verified"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/chevrolet",
+    "carfaxNote": null,
+    "fuelCity": null,
+    "fuelHwy": null
+  },
+  {
+    "id": "2019-bmw-330i-xdrive",
+    "year": 2019,
+    "make": "BMW",
+    "model": "330i",
+    "trim": "xDrive",
+    "bodyType": "Sedan",
+    "price": 31800,
+    "marketAvg": 32500,
+    "marketLow": 29400,
+    "marketHigh": 36100,
+    "odometer": 67500,
+    "city": "Toronto",
+    "province": "ON",
+    "source": "AutoTrader",
+    "engine": "2.0L turbo 4-cylinder",
+    "horsepower": 255,
+    "transmission": "Automatic",
+    "transmissionDetail": "8-speed automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Gas",
+    "fuelCity": 9.6,
+    "fuelHwy": 6.8,
+    "colour": "Black Sapphire",
+    "seats": 5,
+    "owners": 2,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 17,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Sunroof",
+      "Apple CarPlay",
+      "Blind-spot monitoring",
+      "Leather seats",
+      "Built-in navigation",
+      "Power liftgate",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/bmw330-1.jpg",
+        "alt": "2019 BMW 330i xDrive",
+        "credit": {
+          "title": "BMW 330i G20 Black 1",
+          "creator": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:BMW_330i_G20_Black_1.jpg"
+        }
+      },
+      {
+        "src": "images/bmw330-2.jpg",
+        "alt": "2019 BMW 330i xDrive",
+        "credit": {
+          "title": "BMW 330i G20 Black 3",
+          "creator": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:BMW_330i_G20_Black_3.jpg"
+        }
+      },
+      {
+        "src": "images/bmw330-3.jpg",
+        "alt": "2019 BMW 330i xDrive",
+        "credit": {
+          "title": "BMW 330i G20 Black 2",
+          "creator": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:BMW_330i_G20_Black_2.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Under hood",
+          "item": "Oil filter housing gasket seep",
+          "outcome": "Replaced"
+        },
+        {
+          "area": "Tires & brakes",
+          "item": "Run-flat tires at 6/32\"",
+          "outcome": "Within spec"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/bmw/",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  },
+  {
+    "id": "2022-ford-mustang-mach-e-select",
+    "year": 2022,
+    "make": "Ford",
+    "model": "Mustang Mach-E",
+    "trim": "Select AWD",
+    "bodyType": "SUV",
+    "price": 45500,
+    "marketAvg": 43900,
+    "marketLow": 40100,
+    "marketHigh": 48600,
+    "odometer": 22300,
+    "city": "Calgary",
+    "province": "AB",
+    "source": "Dealer Direct",
+    "engine": "Dual electric motors",
+    "horsepower": 266,
+    "transmission": "Automatic",
+    "transmissionDetail": "Single-speed",
+    "drivetrain": "AWD",
+    "fuelType": "Electric",
+    "evRange": 370,
+    "evConsumption": 21.6,
+    "colour": "Rapid Red",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 7,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Panoramic sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Wireless charging",
+      "Built-in navigation",
+      "Power liftgate"
+    ],
+    "images": [
+      {
+        "src": "images/mache-1.jpg",
+        "alt": "2022 Ford Mustang Mach-E Select AWD",
+        "credit": {
+          "title": "Ford Mustang Mach-E Leonberg 2022 1X7A0434",
+          "creator": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_Leonberg_2022_1X7A0434.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": []
+    },
+    "sourceUrl": "https://www.google.com/search?q=2022+Ford+Mustang+Mach-E+dealer+Calgary",
+    "carfaxNote": null,
+    "fuelCity": null,
+    "fuelHwy": null
+  },
+  {
+    "id": "2022-toyota-tacoma-trd-off-road",
+    "year": 2022,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road Double Cab",
+    "bodyType": "Truck",
+    "price": 49800,
+    "marketAvg": 50300,
+    "marketLow": 46200,
+    "marketHigh": 55400,
+    "odometer": 38400,
+    "city": "Vancouver",
+    "province": "BC",
+    "source": "Clutch",
+    "engine": "3.5L V6",
+    "horsepower": 278,
+    "transmission": "Manual",
+    "transmissionDetail": "6-speed manual",
+    "drivetrain": "4WD",
+    "fuelType": "Gas",
+    "fuelCity": 13.9,
+    "fuelHwy": 11.4,
+    "colour": "Midnight Black",
+    "seats": 5,
+    "owners": 1,
+    "accidents": 0,
+    "carfax": "No accidents",
+    "listedDays": 1,
+    "features": [
+      "Heated front seats",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Tow package",
+      "Wireless charging"
+    ],
+    "images": [
+      {
+        "src": "images/tacoma-1.jpg",
+        "alt": "2022 Toyota Tacoma TRD Off-Road Double Cab",
+        "credit": {
+          "title": "2023 Toyota Tacoma TRD Off-Road Double Cab in Black, front left",
+          "creator": "Mr.choppers",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Tacoma_TRD_Off-Road_Double_Cab_in_Black,_front_left.jpg"
+        }
+      },
+      {
+        "src": "images/tacoma-2.jpg",
+        "alt": "2022 Toyota Tacoma TRD Off-Road Double Cab",
+        "credit": {
+          "title": "2023 Toyota Tacoma TRD Off-Road Double Cab in Black, rear right",
+          "creator": "Mr.choppers",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Tacoma_TRD_Off-Road_Double_Cab_in_Black,_rear_right.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Undercarriage",
+          "item": "Skid plate scraped",
+          "outcome": "Cosmetic only"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/toyota",
+    "carfaxNote": null,
+    "evRange": null,
+    "evConsumption": null
+  }
+]
