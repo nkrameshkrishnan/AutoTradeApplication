@@ -21,7 +21,7 @@ It works from any sub-path (`username.github.io/<repo>/`) because `vite.config.j
 
 ## What's in it
 
-- **Inventory** (`#/`): instant search (make, model, trim, colour, city or feature), body-type counts that double as quick filters (SUV, Sedan, Truck, Hatchback, EV), a filter sidebar (price, year, kilometres, transmission, drivetrain, fuel, source platform) that becomes a bottom sheet on phones, five sorts, and a heart on every car for the Saved cars drawer.
+- **Inventory** (`#/`): the year filter always spans 2010 to next year's model year, whatever is in stock; instant search (make, model, trim, colour, city or feature), body-type counts that double as quick filters (SUV, Sedan, Truck, Hatchback, EV), a filter sidebar (price, year, kilometres, transmission, drivetrain, fuel, source platform) that becomes a bottom sheet on phones, five sorts, and a heart on every car for the Saved cars drawer.
 - **Price position**: every car is placed on a strip of similar listings (low, average, high), rated Great deal (5% or more under), Fair price, or Above market (more than 3% over).
 - **Compare** (`#/compare`): tick 2–4 cars; a tray at the bottom holds them. The matrix pins its header row, marks the best value in each numeric row, and has a "Highlight differences only" switch. **Copy link** shares a comparison as `#/compare?ids=a,b,c`.
 - **Vehicle page** (`#/vehicle/<id>`): photo viewer with thumbnails and arrow keys, specifications, features, a 150-point inspection by area, accident and ownership history, and a link to the original listing.
@@ -46,11 +46,11 @@ npm test         # pipeline tests (CSV parser, CARFAX mapping, secret handling)
 - **CARFAX Canada** needs a business API agreement ([VIN Scan Summary or the VHR Order/Look-up API](https://go.carfax.ca/big-solutions)). Once you have it, add repository secrets `CARFAX_API_URL` (a URL template containing `{vin}`) and `CARFAX_API_KEY`, and optionally the variable `CARFAX_AUTH_HEADER` (default `Authorization: Bearer <key>`). `scripts/providers/carfax.mjs` reads fields by their data-dictionary labels; check its `LABELS` map against the response CARFAX sends you. Only listings with a real 17-character `vin` are looked up, so sample listings (`vin: null`) never trigger a paid report.
 - **Report links**: put the CARFAX report URL the seller gives on Clutch or AutoTrader into `history.reportUrl` (with `history.source: "listing"`); the page shows an **Open CARFAX Canada report** button.
 
-The 15 sample listings have invented histories (`history.source: "sample"`) and real, current recall lists for their model years.
+The 21 sample listings have invented histories (`history.source: "sample"`) and real, current recall lists for their model years.
 
 ## Data
 
-`src/data/vehicles.json` holds 15 **sample** listings across Toronto, Ottawa, Montreal, Calgary and Vancouver, from Clutch, AutoTrader, CarGurus and dealers. Prices, kilometres, market averages, owners, accident notes and inspection notes are invented for demonstration; specs and fuel figures are close to published values but should be checked before any real use. "View original source listing" opens a search on the named platform, not a real listing.
+`src/data/vehicles.json` holds 21 **sample** listings (model years 2019–2026) across Toronto, Ottawa, Montreal, Calgary and Vancouver, from Clutch, AutoTrader, CarGurus and dealers. Prices, kilometres, market averages, owners, accident notes and inspection notes are invented for demonstration; specs and fuel figures are close to published values but should be checked before any real use. "View original source listing" opens a search on the named platform, not a real listing.
 
 To add a car, copy an entry and keep the fields: `marketAvg`, `marketLow` and `marketHigh` drive the price rating; `fuelCity`/`fuelHwy` (L/100 km) for combustion cars, `evRange` (km) and `evConsumption` (kWh/100 km) for electric ones; `inspection.attention` lists noted items by area.
 
@@ -91,3 +91,14 @@ Photos are real pictures of each model from Wikimedia Commons, downloaded into `
 | `mache-1.jpg` | Ford Mustang Mach-E Leonberg 2022 1X7A0434 | Alexander Migl | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_Leonberg_2022_1X7A0434.jpg) |
 | `tacoma-1.jpg` | 2023 Toyota Tacoma TRD Off-Road Double Cab in Black, front left | Mr.choppers | CC BY-SA 3.0 | [source](https://commons.wikimedia.org/wiki/File:2023_Toyota_Tacoma_TRD_Off-Road_Double_Cab_in_Black,_front_left.jpg) |
 | `tacoma-2.jpg` | 2023 Toyota Tacoma TRD Off-Road Double Cab in Black, rear right | Mr.choppers | CC BY-SA 3.0 | [source](https://commons.wikimedia.org/wiki/File:2023_Toyota_Tacoma_TRD_Off-Road_Double_Cab_in_Black,_rear_right.jpg) |
+| `crv-1.jpg` | Honda CR-V (6th generation) hybrid 1X7A1956 | Alexander-93 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Honda_CR-V_(6th_generation)_hybrid_1X7A1956.jpg) |
+| `crv-2.jpg` | Honda CR-V (6th generation) hybrid 1X7A1957 | Alexander-93 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Honda_CR-V_(6th_generation)_hybrid_1X7A1957.jpg) |
+| `ioniq5n-1.jpg` | Hyundai Ioniq 5 N IMG 9390 | Alexander-93 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_N_IMG_9390.jpg) |
+| `ioniq5n-2.jpg` | Hyundai Ioniq 5 N IMG 9406 | Alexander-93 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_N_IMG_9406.jpg) |
+| `maverick-1.jpg` | 2025 Ford Maverick XLT, front 4.15.25 | Kevauto | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:2025_Ford_Maverick_XLT,_front_4.15.25.jpg) |
+| `civichatch-1.jpg` | 2025 Honda Civic Hybrid (Europe) DSC 2727 | Alexander Migl | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:2025_Honda_Civic_Hybrid_(Europe)_DSC_2727.jpg) |
+| `civichatch-2.jpg` | 2025 Honda Civic Hybrid (Europe) DSC 2731 | Alexander Migl | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:2025_Honda_Civic_Hybrid_(Europe)_DSC_2731.jpg) |
+| `camry25-1.jpg` | 2025 Toyota Camry LE, front left, 05-24-2025 | MercurySable99 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_LE,_front_left,_05-24-2025.jpg) |
+| `camry25-2.jpg` | 2025 Toyota Camry LE, rear left, 05-24-2025 | MercurySable99 | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_LE,_rear_left,_05-24-2025.jpg) |
+| `crosstrek-1.jpg` | Subaru Crosstrek Wilderness IMG 3719 (cropped) | Alexander Migl | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Subaru_Crosstrek_Wilderness_IMG_3719_(cropped).jpg) |
+| `crosstrek-2.jpg` | Subaru Crosstrek Wilderness IMG 3726 (cropped) | Alexander Migl | CC BY-SA 4.0 | [source](https://commons.wikimedia.org/wiki/File:Subaru_Crosstrek_Wilderness_IMG_3726_(cropped).jpg) |

@@ -27,8 +27,10 @@ const years = vehicles.map((v) => v.year);
 export const BOUNDS = {
   priceMin: Math.floor(Math.min(...prices) / 5000) * 5000,
   priceMax: Math.ceil(Math.max(...prices) / 5000) * 5000,
-  yearMin: Math.min(...years),
-  yearMax: Math.max(...years),
+  // A fixed span, so the year filter covers what buyers search for, not just what's in stock today.
+  // Next calendar year is included: new model years go on sale the autumn before.
+  yearMin: Math.min(2010, ...years),
+  yearMax: Math.max(new Date().getFullYear() + 1, ...years),
   kmMax: 100000,
 };
 

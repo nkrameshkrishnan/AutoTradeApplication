@@ -2430,5 +2430,879 @@
         }
       ]
     }
+  },
+  {
+    "id": "2024-honda-cr-v-hybrid-ex-l",
+    "year": 2024,
+    "make": "Honda",
+    "model": "CR-V Hybrid",
+    "trim": "EX-L AWD",
+    "bodyType": "SUV",
+    "price": 41900,
+    "marketAvg": 43500,
+    "marketLow": 39800,
+    "marketHigh": 47200,
+    "odometer": 24600,
+    "city": "Toronto",
+    "province": "ON",
+    "source": "Clutch",
+    "engine": "2.0L 4-cylinder hybrid",
+    "horsepower": 204,
+    "transmission": "Automatic",
+    "transmissionDetail": "eCVT automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Hybrid",
+    "fuelCity": 6,
+    "fuelHwy": 6.6,
+    "colour": "Crystal Black Pearl",
+    "seats": 5,
+    "listedDays": 3,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Heated rear seats",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Leather seats",
+      "Wireless charging",
+      "Power liftgate",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/crv-1.jpg",
+        "alt": "2024 Honda CR-V Hybrid EX-L AWD",
+        "credit": {
+          "title": "Honda CR-V (6th generation) hybrid 1X7A1956",
+          "creator": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Honda_CR-V_(6th_generation)_hybrid_1X7A1956.jpg"
+        }
+      },
+      {
+        "src": "images/crv-2.jpg",
+        "alt": "2024 Honda CR-V Hybrid EX-L AWD",
+        "credit": {
+          "title": "Honda CR-V (6th generation) hybrid 1X7A1957",
+          "creator": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Honda_CR-V_(6th_generation)_hybrid_1X7A1957.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Tires & brakes",
+          "item": "Front tires at 7/32\"",
+          "outcome": "Within spec"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/honda",
+    "evRange": null,
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "HONDA",
+      "models": [
+        "CR-V HYBRID",
+        "CR-V"
+      ],
+      "year": 2024
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 4
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026274",
+          "date": "2026-06-04",
+          "system": "Other",
+          "manufacturerNumber": "RS6 / CY2",
+          "summary": "Issue: On certain vehicles, if the tire repair kit nozzle is not properly attached to the tire valve, pressure could build up in the sealant bottle. As a result, excessive pressure could cause the bottle cap to detach. Safety Risk: If the bottle cap detaches, it could increase the risk of injury. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to replace the nozzle on the tire repair kit. If the sealant bottle has been previously used, it will be replaced."
+        },
+        {
+          "number": "2024606",
+          "date": "2024-10-15",
+          "system": "Fuel System",
+          "manufacturerNumber": "HO19 / HO20 / HO21",
+          "summary": "Issue: On certain vehicles, the high-pressure fuel pump may not have been manufactured properly. As a result, the fuel pump could crack and leak fuel. Safety Risk: A fuel leak can create the risk of a fire. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the high-pressure fuel pump."
+        },
+        {
+          "number": "2024588",
+          "date": "2024-10-03",
+          "system": "Steering",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the steering gearbox may not have been manufactured properly. As a result, there could be a sudden change in steering feel and an increase in steering effort. Safety Risk: A sudden change in steering effort could increase the risk of a crash. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to add grease to the steering gearbox and replace the electronic power steering spring."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2025-hyundai-ioniq-5-n",
+    "year": 2025,
+    "make": "Hyundai",
+    "model": "IONIQ 5 N",
+    "trim": "AWD",
+    "bodyType": "SUV",
+    "price": 61900,
+    "marketAvg": 60400,
+    "marketLow": 56500,
+    "marketHigh": 66900,
+    "odometer": 9800,
+    "city": "Vancouver",
+    "province": "BC",
+    "source": "AutoTrader",
+    "engine": "Dual electric motors",
+    "horsepower": 601,
+    "transmission": "Automatic",
+    "transmissionDetail": "Single-speed",
+    "drivetrain": "AWD",
+    "fuelType": "Electric",
+    "evRange": 356,
+    "evConsumption": 25.4,
+    "colour": "Performance Blue Matte",
+    "seats": 5,
+    "listedDays": 6,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Heated rear seats",
+      "Ventilated front seats",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "360° camera",
+      "Head-up display",
+      "Wireless charging",
+      "Built-in navigation",
+      "Premium audio",
+      "Power liftgate"
+    ],
+    "images": [
+      {
+        "src": "images/ioniq5n-1.jpg",
+        "alt": "2025 Hyundai IONIQ 5 N AWD",
+        "credit": {
+          "title": "Hyundai Ioniq 5 N IMG 9390",
+          "creator": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_N_IMG_9390.jpg"
+        }
+      },
+      {
+        "src": "images/ioniq5n-2.jpg",
+        "alt": "2025 Hyundai IONIQ 5 N AWD",
+        "credit": {
+          "title": "Hyundai Ioniq 5 N IMG 9406",
+          "creator": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_N_IMG_9406.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Tires & brakes",
+          "item": "Rear tires at 6/32\", wear consistent with track use",
+          "outcome": "Within spec"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/hyundai/",
+    "fuelCity": null,
+    "fuelHwy": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "HYUNDAI",
+      "models": [
+        "IONIQ 5"
+      ],
+      "year": 2025
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "BC"
+      ],
+      "lastRegisteredProvince": "BC",
+      "serviceRecords": 2
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2025193",
+          "date": "2025-04-10",
+          "system": "Brakes",
+          "manufacturerNumber": "R0279 (51D100)",
+          "summary": "Issue: On certain vehicles, the software update completed by a Hyundai dealer for recall R0277 (Transport Canada recall no. 2025-054) may not be effective. As a result, a second repair is required. On certain vehicles, a software problem in the integrated electronic brake could cause reduced braking when using the left-foot braking (LFB) feature. Additionally, a software problem in the vehicle control unit could cause the vehicle to continue to accelerate for a short period of time when using the N e-Shift feature. Note: This recall replaces recall R0277 (Transport Canada recall no. 2025-054). This recall only affects certain Ioniq 5 N models. Safety Risk: Reduced braking can cause extended stopping distances and increase the risk of a crash. A vehicle that continues to accelerate could create the risk of a crash. Corrective Actions: To reduce the safety risk, Hyundai recommends not to use the LFB or N e-SHIFT features until the recall repairs have been completed. Hyundai will notify owners by mail and advise you to take your vehicle to a dealership to update the integrated electronic brake and vehicle control unit software."
+        },
+        {
+          "number": "2025054",
+          "date": "2025-02-06",
+          "system": "Brakes",
+          "manufacturerNumber": "R0277",
+          "summary": "This recall was replaced by Transport Canada recall no. 2025-193. Issue: On certain vehicles, a software problem in the integrated electronic brake could cause reduced braking when using the left-foot braking (LFB) feature. Note: This recall only affects certain Ioniq 5 N models. Safety Risk: Reduced braking can cause extended stopping distances and increase the risk of a crash. Corrective Actions: To reduce the safety risk, Hyundai recommends not to use the LFB feature until the recall repairs have been completed. Hyundai will notify owners by mail and send a wireless over-the-air software update to eligible vehicles to update the integrated electronic brake and vehicle control unit software. Alternatively, you may schedule an appointment to have the update performed at a Hyundai dealership. Note: Potential complications have been reported with the corrective actions and, as a result, the recall campaign is currently suspended. Hyundai is investigating the root cause and will provide an update once available. For owners who have already had the recall repairs completed, it is advised NOT TO USE the N e-SHIFT feature."
+        },
+        {
+          "number": "2024552",
+          "date": "2024-09-23",
+          "system": "Label",
+          "manufacturerNumber": "R0260",
+          "summary": "Issue: On certain vehicles, the compliance label may be missing information in French. The words listed on the label for \"Tires\", \"Rims\", \"Front\" and \"Rear\" appear in English only, when they should be listed as \"Tires/Pneus\", \"Rims/Jantes\", \"Front/Avant\" and \"Rear/Arriere\". Canadian regulations require this information to be listed on the label in both English and French. Safety Risk: These small errors do not affect vehicle safety. Corrective Actions: This is not a recall. The company has corrected the compliance label for all new vehicles."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2025-ford-maverick-xlt-hybrid",
+    "year": 2025,
+    "make": "Ford",
+    "model": "Maverick",
+    "trim": "XLT Hybrid SuperCrew",
+    "bodyType": "Truck",
+    "price": 36500,
+    "marketAvg": 38900,
+    "marketLow": 34200,
+    "marketHigh": 42800,
+    "odometer": 31200,
+    "city": "Calgary",
+    "province": "AB",
+    "source": "Dealer Direct",
+    "engine": "2.5L 4-cylinder hybrid",
+    "horsepower": 191,
+    "transmission": "Automatic",
+    "transmissionDetail": "eCVT automatic",
+    "drivetrain": "FWD",
+    "fuelType": "Hybrid",
+    "fuelCity": 5.6,
+    "fuelHwy": 6.7,
+    "colour": "Desert Sand",
+    "seats": 5,
+    "listedDays": 10,
+    "features": [
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Remote start"
+    ],
+    "images": [
+      {
+        "src": "images/maverick-1.jpg",
+        "alt": "2025 Ford Maverick XLT Hybrid SuperCrew",
+        "credit": {
+          "title": "2025 Ford Maverick XLT, front 4.15.25",
+          "creator": "Kevauto",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Ford_Maverick_XLT,_front_4.15.25.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Exterior",
+          "item": "Tailgate edge scratch",
+          "outcome": "Touched up"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.google.com/search?q=2025+Ford+Maverick+dealer+Calgary",
+    "evRange": null,
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "FORD",
+      "models": [
+        "MAVERICK"
+      ],
+      "year": 2025
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Rental",
+        "Personal"
+      ],
+      "registrations": [
+        "AB"
+      ],
+      "lastRegisteredProvince": "AB",
+      "serviceRecords": 3
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026259",
+          "date": "2026-05-27",
+          "system": "Suspension",
+          "manufacturerNumber": "26S36",
+          "summary": "Issue: On certain vehicles, the front lower ball joint(s) may not have been installed correctly on the steering knuckle(s). As a result, the front lower ball joint(s) could separate and cause a loss of steering control. Safety Risk: A loss of steering control could create a risk of a crash. Corrective Actions: To reduce the safety risk Ford advises you not to drive your vehicle until the recall repairs are completed. Ford will notify owners by mail and advise you to contact a dealer to arrange for an inspection. The dealer will repair the front steering knuckle(s), as necessary."
+        },
+        {
+          "number": "2026162",
+          "date": "2026-04-01",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "26C19",
+          "summary": "Issue: On certain vehicles, the front passenger seat occupant classification system (OCS) may not work properly. As a result, the airbag system may turn off the passenger-front airbag even when a passenger is seated. Note: This problem would cause the supplemental restraint system (SRS) malfunction indicator to display on the instrument panel, a warning to display in the driver information center and the airbag indicator light to display ''Passenger Airbag OFF''. Safety Risk: An airbag system that doesn't work properly could increase the risk of injury in a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to replace the front passenger seat occupant classification sensor."
+        },
+        {
+          "number": "2026123",
+          "date": "2026-03-17",
+          "system": "Structure",
+          "manufacturerNumber": "26S18",
+          "summary": "Issue: On certain vehicles, the moonroof glass may not be properly attached to the frame. As a result, the glass could become loose and separate from the vehicle. Safety Risk: A glass moonroof that detaches from the vehicle could create a road hazard for others and increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to inspect the date code of the moonroof glass. It will be replaced if necessary."
+        },
+        {
+          "number": "2026094",
+          "date": "2026-03-03",
+          "system": "Engine",
+          "manufacturerNumber": "26S10",
+          "summary": "Issue: On certain vehicles, the exhaust gas recirculation (EGR) valve may not have been manufactured properly. As a result, the EGR valve could fail and cause a loss of power to the wheels. Note: This recall only affects certain vehicles equipped with a 1.5 L engine, 2.0 L gas or hybrid engine or 2.3 L engine. Safety Risk: A sudden loss of power to the wheels could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to replace the EGR valve."
+        },
+        {
+          "number": "2026079",
+          "date": "2026-02-20",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "26C10",
+          "summary": "Issue: On certain vehicles, a software problem with the integrated trailer module (ITRM) may cause the trailer lights not to work when towing. This problem could also cause the trailer brakes not to work on certain vehicles. Note: This problem would cause a \"Trailer brake module fault\" message to be displayed and turn signal telltale to flash rapidly. This recall also affects certain Super Duty incomplete vehicles. Safety Risk: Trailer lights that don't work could make the vehicle less visible and cause following drivers not to recognize that the vehicle is braking or intends to turn or change lanes. These issues could increase the risk of a crash. Additionally, a loss of trailer brakes could increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and send a wireless over-the-air software update to eligible vehicles to update the ITRM software. Alternatively, you may schedule an appointment to have the update performed at a Ford dealership."
+        },
+        {
+          "number": "2025706",
+          "date": "2025-12-18",
+          "system": "Airbag",
+          "manufacturerNumber": "25SE7",
+          "summary": "Issue: On certain vehicles, the instrument panel may not have been manufactured properly. As a result, the instrument panel topper could detach and be propelled toward vehicle occupants when the passenger-front airbag inflates in a crash. Safety Risk: A panel that is propelled towards vehicle occupants could create an increased risk of injury. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to replace the instrument panel topper."
+        },
+        {
+          "number": "2025691",
+          "date": "2025-12-12",
+          "system": "Powertrain",
+          "manufacturerNumber": "25C69",
+          "summary": "Issue: On certain vehicles, a problem in the integrated park module could cause the park pawl not to engage when the transmission is shifted to the park (P) position. If this happens, the vehicle could move when it's parked, and the parking brake isn't used. Note: This problem would cause a wrench light and a shift system fault message to be displayed in the instrument cluster. For the Maverick, Escape and Corsair models, this recall only affects vehicles equipped with a 2.5 L hybrid engine. For the F-150 model, this recall only affects Lightning (electric) models. Safety Risk: A parked vehicle that rolls away could create the risk of an injury or a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to update the secondary on board diagnostic module (SOBDMC) software."
+        },
+        {
+          "number": "2025629",
+          "date": "2025-11-14",
+          "system": "Brakes",
+          "manufacturerNumber": "25SC6",
+          "summary": "Issue: On a small number of vehicles, the electric brake booster (EBB) may not have been manufactured properly. As a result, the EBB control unit could overheat and cause a loss of power brake assist and stability control. Safety Risk: A loss of power brake assist could cause a sudden increase in brake pedal force and lead to an increase in stopping distance. This could increase the risk of a crash. Additionally, a loss of stability control could also increase the risk of a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to replace the electric brake booster."
+        },
+        {
+          "number": "2025279",
+          "date": "2025-05-23",
+          "system": "Lights And Instruments",
+          "manufacturerNumber": "25C17",
+          "summary": "Issue: On certain vehicles, the passenger airbag disabled indicator may not be properly secured to the instrument panel and could become loose. As a result, you might not be aware if the passenger-front airbag is on or off. Safety Risk: A passenger airbag disabled indicator that can't be seen could cause confusion. This could create an increased risk of injury in a crash. Corrective Actions: Ford will notify owners by mail and advise you to take your vehicle to a dealership to install clips to secure the passenger airbag disabled indicator to the instrument panel."
+        },
+        {
+          "number": "2025281",
+          "date": "2025-05-23",
+          "system": "Engine",
+          "manufacturerNumber": "25S52",
+          "summary": "Issue: On certain vehicles, the engine block heater could overheat when the block heater is plugged in. Note: This recall only affects certain vehicles equipped with a 1.5 L or 2.0 L engine and a factory-installed block heater. Safety Risk: An engine block heater and/or wiring that overheats or melts could create the risk of a fire. Corrective Actions: To reduce the safety risk, Ford advises you not to plug in the engine block heater until the recall repairs have been completed. Ford will notify owners by mail. You can choose to have the dealer remove the block heater, or once the final repair is available, Ford will send you another notice to advise you to take your vehicle to a dealership to replace the block heater element. The dealer will also inspect and, if necessary, replace the block heater electrical cord."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2025-honda-civic-hatchback-sport-touring-hybrid",
+    "year": 2025,
+    "make": "Honda",
+    "model": "Civic Hatchback",
+    "trim": "Sport Touring Hybrid",
+    "bodyType": "Hatchback",
+    "price": 34800,
+    "marketAvg": 34100,
+    "marketLow": 32200,
+    "marketHigh": 37400,
+    "odometer": 14500,
+    "city": "Montreal",
+    "province": "QC",
+    "source": "CarGurus",
+    "engine": "2.0L 4-cylinder hybrid",
+    "horsepower": 200,
+    "transmission": "Automatic",
+    "transmissionDetail": "eCVT automatic",
+    "drivetrain": "FWD",
+    "fuelType": "Hybrid",
+    "fuelCity": 4.8,
+    "fuelHwy": 5.2,
+    "colour": "Crystal Black Pearl",
+    "seats": 5,
+    "listedDays": 4,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Leather seats",
+      "Wireless charging",
+      "Built-in navigation",
+      "Premium audio"
+    ],
+    "images": [
+      {
+        "src": "images/civichatch-1.jpg",
+        "alt": "2025 Honda Civic Hatchback Sport Touring Hybrid",
+        "credit": {
+          "title": "2025 Honda Civic Hybrid (Europe) DSC 2727",
+          "creator": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Honda_Civic_Hybrid_(Europe)_DSC_2727.jpg"
+        }
+      },
+      {
+        "src": "images/civichatch-2.jpg",
+        "alt": "2025 Honda Civic Hatchback Sport Touring Hybrid",
+        "credit": {
+          "title": "2025 Honda Civic Hybrid (Europe) DSC 2731",
+          "creator": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Honda_Civic_Hybrid_(Europe)_DSC_2731.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": []
+    },
+    "sourceUrl": "https://www.cargurus.ca/Cars/l-Used-Honda-Civic-Hatchback",
+    "evRange": null,
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "HONDA",
+      "models": [
+        "CIVIC"
+      ],
+      "year": 2025
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "QC"
+      ],
+      "lastRegisteredProvince": "QC",
+      "serviceRecords": 2
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2025599",
+          "date": "2025-10-30",
+          "system": "Wheels",
+          "manufacturerNumber": "HQ40",
+          "summary": "Issue: This recall is for certain aluminum wheels that were installed before delivery or sold as a dealer accessory. On certain vehicles, the wheels may not have been manufactured properly. As a result, the wheel nut(s) could loosen and cause the wheel(s) to detach. Safety Risk: A wheel separation could cause a loss of control and increase the risk of a crash. Additionally, a wheel that separates could create a road hazard for others. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the hub(s), wheel(s) and wheel nut(s)."
+        },
+        {
+          "number": "2024606",
+          "date": "2024-10-15",
+          "system": "Fuel System",
+          "manufacturerNumber": "HO19 / HO20 / HO21",
+          "summary": "Issue: On certain vehicles, the high-pressure fuel pump may not have been manufactured properly. As a result, the fuel pump could crack and leak fuel. Safety Risk: A fuel leak can create the risk of a fire. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the high-pressure fuel pump."
+        },
+        {
+          "number": "2024588",
+          "date": "2024-10-03",
+          "system": "Steering",
+          "manufacturerNumber": null,
+          "summary": "Issue: On certain vehicles, the steering gearbox may not have been manufactured properly. As a result, there could be a sudden change in steering feel and an increase in steering effort. Safety Risk: A sudden change in steering effort could increase the risk of a crash. Corrective Actions: Honda will notify owners by mail and advise you to take your vehicle to a dealership to add grease to the steering gearbox and replace the electronic power steering spring."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2025-toyota-camry-le",
+    "year": 2025,
+    "make": "Toyota",
+    "model": "Camry",
+    "trim": "LE Hybrid",
+    "bodyType": "Sedan",
+    "price": 35400,
+    "marketAvg": 36300,
+    "marketLow": 33600,
+    "marketHigh": 39200,
+    "odometer": 21700,
+    "city": "Ottawa",
+    "province": "ON",
+    "source": "AutoTrader",
+    "engine": "2.5L 4-cylinder hybrid",
+    "horsepower": 225,
+    "transmission": "Automatic",
+    "transmissionDetail": "eCVT automatic",
+    "drivetrain": "FWD",
+    "fuelType": "Hybrid",
+    "fuelCity": 4.9,
+    "fuelHwy": 5,
+    "colour": "Wind Chill Pearl",
+    "seats": 5,
+    "listedDays": 8,
+    "features": [
+      "Heated front seats",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Wireless charging"
+    ],
+    "images": [
+      {
+        "src": "images/camry25-1.jpg",
+        "alt": "2025 Toyota Camry LE Hybrid",
+        "credit": {
+          "title": "2025 Toyota Camry LE, front left, 05-24-2025",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_LE,_front_left,_05-24-2025.jpg"
+        }
+      },
+      {
+        "src": "images/camry25-2.jpg",
+        "alt": "2025 Toyota Camry LE Hybrid",
+        "credit": {
+          "title": "2025 Toyota Camry LE, rear left, 05-24-2025",
+          "creator": "MercurySable99",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_LE,_rear_left,_05-24-2025.jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": [
+        {
+          "area": "Interior",
+          "item": "Rear seat trim marked",
+          "outcome": "Cleaned"
+        }
+      ]
+    },
+    "sourceUrl": "https://www.autotrader.ca/cars/toyota/",
+    "evRange": null,
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "TOYOTA",
+      "models": [
+        "CAMRY",
+        "CAMRY HYBRID"
+      ],
+      "year": 2025
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Personal"
+      ],
+      "registrations": [
+        "ON"
+      ],
+      "lastRegisteredProvince": "ON",
+      "serviceRecords": 3
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026383",
+          "date": "2026-08-06",
+          "system": "Visual System",
+          "manufacturerNumber": "SRC RN0",
+          "summary": "Issue: On certain vehicles, a software problem could cause the combination meter in the instrument cluster not to display when the vehicle is started. As a result, the turn signals and hazard lights may not work. Additionally, you may not be able to see certain information about the vehicle, including warning lights, malfunction tell-tales and seat belt reminders. Note: This recall only affects vehicles equipped with a 7-inch display. Safety Risk: Turn signals that don't work may cause a person not to recognize when the driver intends to turn or change lanes and could increase the risk of a crash. Warnings, tell-tales and gauges that don't display could also increase the risk of a crash. A seat belt warning that doesn't work may not remind you to buckle your seat belt. Not wearing your seat belt can increase the risk of injury in a crash. Corrective Actions: Toyota will notify owners by mail and advise you to take your vehicle to a dealership to update the combination meter software."
+        },
+        {
+          "number": "2025693",
+          "date": "2025-12-16",
+          "system": "High Voltage",
+          "manufacturerNumber": "SRC RL3",
+          "summary": "Issue: On certain vehicles, a bolt in the inverter assembly for the hybrid system may not have been tightened properly. As a result, the vehicle could enter a reduced power mode or lose power to the wheels. Additionally, if the bolt becomes loose in the inverter assembly and the ignition is on, it could cause a short circuit. Safety Risk: A loss of power to the wheels could increase the risk of a crash. A short circuit can create the risk of a fire. Corrective Actions: Toyota will notify owners by mail and advise you to take your vehicle to a dealership to inspect the hybrid inverter assembly bolt. The dealer will tighten the bolt or, if necessary, replace the inverter assembly."
+        },
+        {
+          "number": "2025594",
+          "date": "2025-10-30",
+          "system": "Visual System",
+          "manufacturerNumber": "SRC RK9 / SRC RL2",
+          "summary": "Issue: Under certain conditions, a software problem could cause the rearview camera image to freeze or not to display. If this happens, the rearview image may not display when the transmission is shifted into reverse. Canadian regulations require the rearview image to display when the vehicle is reversing. Note: This recall only affects certain vehicles equipped with a panoramic view monitor system. Safety Risk: A rearview camera image that doesn't display correctly could reduce a driver's ability to see behind the vehicle while backing up. This could increase the risk of a crash. Corrective Actions: The company will notify owners in writing and advise you to take your vehicle to a dealership to update the parking assist ECU software."
+        },
+        {
+          "number": "2025469",
+          "date": "2025-09-11",
+          "system": "Visual System",
+          "manufacturerNumber": "SRC RK3 / SRC RK4",
+          "summary": "Issue: On certain vehicles, a software problem could cause the combination meter in the instrument panel not to display when the vehicle is started. As a result, you may not be able to see certain information about the vehicle, including the speedometer, fuel gauge, warning lights and malfunction tell-tales. Note: This recall only affects vehicles equipped with a 12.3-inch display. Safety Risk: Warnings, tell-tales and gauges that don't display could increase the risk of a crash. Corrective Actions: The company will notify owners by mail and advise you to take your vehicle to a dealership to update the combination meter software. Alternatively, certain eligible vehicles will be sent a wireless over-the-air software update, which you can install yourself. For certain vehicles, the dealer will also inspect and, if necessary, replace the combination meter."
+        },
+        {
+          "number": "2025050",
+          "date": "2025-02-06",
+          "system": "Seats And Restraints",
+          "manufacturerNumber": "SRC RJ6 / SRC RJ7",
+          "summary": "Issue: On certain vehicles, the second-row center seat belt may have been damaged during production. As a result, the seat belt could break in a crash. If this happens, the seat belt may not hold a person in place during the crash. Safety Risk: A seat belt that doesn't work properly could increase the risk of injury in a crash. Corrective Actions: To reduce the safety risk, the company advises that you shouldn't transport a passenger in the second-row center seat until the recall repairs are completed. The company will notify owners by mail and advise you to take your vehicle to a dealership to inspect and, if necessary, replace the second-row center seat belt assembly."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2026-subaru-crosstrek-wilderness",
+    "year": 2026,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Wilderness",
+    "bodyType": "SUV",
+    "price": 38700,
+    "marketAvg": 37200,
+    "marketLow": 35100,
+    "marketHigh": 40300,
+    "odometer": 6800,
+    "city": "Vancouver",
+    "province": "BC",
+    "source": "Clutch",
+    "engine": "2.5L flat-4",
+    "horsepower": 182,
+    "transmission": "Automatic",
+    "transmissionDetail": "CVT automatic",
+    "drivetrain": "AWD",
+    "fuelType": "Gas",
+    "fuelCity": 9,
+    "fuelHwy": 8.1,
+    "colour": "Geyser Blue",
+    "seats": 5,
+    "listedDays": 2,
+    "features": [
+      "Heated front seats",
+      "Heated steering wheel",
+      "Sunroof",
+      "Adaptive cruise control",
+      "Apple CarPlay",
+      "Android Auto",
+      "Blind-spot monitoring",
+      "Lane-keep assist",
+      "Wireless charging"
+    ],
+    "images": [
+      {
+        "src": "images/crosstrek-1.jpg",
+        "alt": "2026 Subaru Crosstrek Wilderness",
+        "credit": {
+          "title": "Subaru Crosstrek Wilderness IMG 3719 (cropped)",
+          "creator": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Subaru_Crosstrek_Wilderness_IMG_3719_(cropped).jpg"
+        }
+      },
+      {
+        "src": "images/crosstrek-2.jpg",
+        "alt": "2026 Subaru Crosstrek Wilderness",
+        "credit": {
+          "title": "Subaru Crosstrek Wilderness IMG 3726 (cropped)",
+          "creator": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Subaru_Crosstrek_Wilderness_IMG_3726_(cropped).jpg"
+        }
+      }
+    ],
+    "inspection": {
+      "points": 150,
+      "attention": []
+    },
+    "sourceUrl": "https://www.clutch.ca/cars/subaru",
+    "evRange": null,
+    "evConsumption": null,
+    "vin": null,
+    "recallQuery": {
+      "make": "SUBARU",
+      "models": [
+        "CROSSTREK"
+      ],
+      "year": 2026
+    },
+    "history": {
+      "provider": "CARFAX Canada",
+      "source": "sample",
+      "product": null,
+      "asOf": "2026-11-10",
+      "reportUrl": null,
+      "owners": 1,
+      "accidents": [],
+      "damageReported": false,
+      "policeReportedAccident": false,
+      "totalLoss": false,
+      "frameDamage": false,
+      "airbagDeployed": false,
+      "fireFloodDamage": false,
+      "stolen": false,
+      "odometerProblem": false,
+      "titleBrand": "Normal",
+      "usHistory": false,
+      "ownershipTypes": [
+        "Dealer demonstrator",
+        "Personal"
+      ],
+      "registrations": [
+        "BC"
+      ],
+      "lastRegisteredProvince": "BC",
+      "serviceRecords": 1
+    },
+    "recalls": {
+      "source": "Transport Canada",
+      "dataset": "Motor Vehicle Safety Recalls Database",
+      "url": "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats",
+      "scope": "model-year",
+      "asOf": "2026-11-15",
+      "items": [
+        {
+          "number": "2026329",
+          "date": "2026-07-07",
+          "system": "Label",
+          "manufacturerNumber": "WRH-26",
+          "summary": "Issue: On certain vehicles, the compliance label lists an incorrect gross axle weight rating (GAWR). This could lead you to overload the vehicle, which could cause poor handling or a tire failure. Note: For the Forester model, this recall affects both gas and hybrid models. For the Crosstrek model, only the Crosstrek Hybrid model is affected. Safety Risk: Poor handling or a tire failure could cause a loss of control and increase the risk of a crash. Corrective Actions: Subaru will mail a new compliance label to each owner. If you'd like help to install the label, you can contact a Subaru dealer to have it installed free of charge."
+        },
+        {
+          "number": "2026077",
+          "date": "2026-02-20",
+          "system": "Fuel System",
+          "manufacturerNumber": "WRD-26",
+          "summary": "Issue: On certain vehicles, the fuel filler cap gasket may not seal properly to the housing. As a result, fuel could leak from the fuel filler neck. Note: This recall only affects certain hybrid model vehicles. Safety Risk: A fuel leak can create the risk of a fire. Corrective Actions: To reduce the safety risk, Subaru recommends keeping the fuel tank below 50% capacity until the recall repairs have been completed. Subaru will notify owners by mail and advise you to take your vehicle to a dealership to replace the fuel filler cap gasket."
+        }
+      ]
+    }
   }
 ]
