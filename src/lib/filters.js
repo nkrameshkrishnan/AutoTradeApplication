@@ -1,10 +1,18 @@
 import vehicles from '../data/vehicles.json';
+import { isClean, nonPersonal } from './history.js';
 
 export const BODY_TYPES = ['All', 'SUV', 'Sedan', 'Truck', 'Hatchback', 'EV'];
 export const TRANSMISSIONS = ['Automatic', 'Manual'];
 export const DRIVETRAINS = ['AWD', 'FWD', 'RWD', '4WD'];
 export const FUELS = ['Gas', 'Hybrid', 'Electric'];
 export const SOURCES = ['Clutch', 'AutoTrader', 'CarGurus', 'Dealer Direct'];
+export const HISTORY = ['No reported accidents', 'One owner', 'Personal use only'];
+
+const historyTest = {
+  'No reported accidents': (v) => isClean(v.history),
+  'One owner': (v) => v.history?.owners === 1,
+  'Personal use only': (v) => nonPersonal(v.history).length === 0,
+};
 
 export const SORTS = [
   { id: 'best', label: 'Best match' },
@@ -36,10 +44,11 @@ export const EMPTY_FILTERS = {
   drivetrain: [],
   fuel: [],
   source: [],
+  history: [],
 };
 
 const haystack = (v) =>
-  [v.year, v.make, v.model, v.trim, v.bodyType, v.fuelType, v.drivetrain, v.transmission, v.colour, v.city, v.source, ...v.features]
+  [v.year, v.make, v.model, v.trim, v.bodyType, v.fuelType, v.drivetrain, v.transmission, v.colour, v.city, v.source, ...v.features, isClean(v.history) ? 'no accidents clean carfax' : 'accident', v.history?.owners === 1 ? 'one owner' : '']
     .join(' ')
     .toLowerCase();
 
@@ -69,6 +78,7 @@ export function matches(v, f, skip = null) {
   if (skip !== 'drivetrain' && f.drivetrain.length && !f.drivetrain.includes(v.drivetrain)) return false;
   if (skip !== 'fuel' && f.fuel.length && !f.fuel.includes(v.fuelType)) return false;
   if (skip !== 'source' && f.source.length && !f.source.includes(v.source)) return false;
+  if (skip !== 'history' && f.history?.length && !f.history.every((h) => historyTest[h](v))) return false;
   return true;
 }
 
@@ -78,7 +88,8 @@ export function facetCounts(list, f, facet, options) {
   const pool = list.filter((v) => matches(v, f, facet));
   const counts = {};
   for (const o of options) {
-    if (facet === 'body') counts[o] = o === 'All' ? pool.length : pool.filter((v) => (o === 'EV' ? v.fuelType === 'Electric' : v.bodyType === o)).length;
+    if (facet === 'history') counts[o] = pool.filter((v) => historyTest[o](v)).length;
+    else if (facet === 'body') counts[o] = o === 'All' ? pool.length : pool.filter((v) => (o === 'EV' ? v.fuelType === 'Electric' : v.bodyType === o)).length;
     else counts[o] = pool.filter((v) => v[fieldOf[facet]] === o).length;
   }
   return counts;
@@ -107,6 +118,6 @@ export function activeFilterCount(f) {
   if (f.priceMin !== BOUNDS.priceMin || f.priceMax !== BOUNDS.priceMax) n++;
   if (f.yearMin !== BOUNDS.yearMin || f.yearMax !== BOUNDS.yearMax) n++;
   if (f.kmMax !== BOUNDS.kmMax) n++;
-  n += f.transmission.length + f.drivetrain.length + f.fuel.length + f.source.length;
+  n += f.transmission.length + f.drivetrain.length + f.fuel.length + f.source.length + (f.history?.length ?? 0);
   return n;
 }

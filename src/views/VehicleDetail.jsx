@@ -10,6 +10,7 @@ import { EASE, Reveal } from '../components/motion.jsx';
 import { useStore } from '../lib/store.jsx';
 import { asset, fullTitle, km, listedAgo, money, num, place } from '../lib/format.js';
 import { priceRating } from '../lib/finance.js';
+import { FLAGS, SOURCE_NOTE, accidentLabel, isClean, nonPersonal, ownersLabel } from '../lib/history.js';
 
 const ALL_FEATURES = [
   'Heated front seats', 'Heated steering wheel', 'Heated rear seats', 'Ventilated front seats', 'Panoramic sunroof', 'Sunroof',
@@ -216,33 +217,142 @@ function Inspection({ v }) {
   );
 }
 
+function Flag({ value }) {
+  if (value === true) return <span className="font-medium text-warn-ink">Reported</span>;
+  if (value === false) return <span className="text-ink">None</span>;
+  return <span className="text-muted">Not reported</span>;
+}
+
 function History({ v }) {
-  const clean = v.accidents === 0;
-  const recall = v.inspection.attention.find((a) => /recall/i.test(a.item));
+  const h = v.history;
+  const clean = isClean(h);
+  const np = nonPersonal(h);
+  const report = h?.reportUrl;
   return (
-    <Card className="p-5">
-      <h2 className="text-base font-medium">Accident and ownership history</h2>
+    <Card className="p-5" aria-labelledby="history-h">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 id="history-h" className="text-base font-medium">Vehicle history</h2>
+        <p className="num text-xs text-muted">{h.provider} · as of {h.asOf}</p>
+      </div>
+
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${clean ? 'bg-pos-bg text-pos-ink' : 'bg-warn-bg text-warn-ink'}`}>
-          Carfax: {v.carfax}
-        </span>
-        <span className="inline-flex h-6 items-center rounded-full bg-neu-bg px-2.5 text-xs font-medium text-neu-ink">
-          {v.owners} previous {v.owners === 1 ? 'owner' : 'owners'}
+        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${clean ? 'bg-pos-bg text-pos-ink' : 'bg-warn-bg text-warn-ink'}`}>{accidentLabel(h)}</span>
+        <span className="inline-flex h-6 items-center rounded-full bg-neu-bg px-2.5 text-xs font-medium text-neu-ink">{ownersLabel(h)}</span>
+        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${h.titleBrand === 'Normal' ? 'bg-neu-bg text-neu-ink' : 'bg-warn-bg text-warn-ink'}`}>
+          {h.titleBrand === 'Normal' ? 'Normal branding' : `${h.titleBrand} title`}
         </span>
       </div>
-      <dl className="mt-3 text-sm">
-        {[
-          ['Reported accidents', clean ? '0' : `${v.accidents}, ${v.carfaxNote.toLowerCase()}`],
-          ['Registered in', `${v.city}, ${v.province}`],
-          ['Open recalls', recall ? 'None, battery recall completed' : 'None reported'],
-          ['Theft or salvage records', 'None'],
-        ].map(([k, val]) => (
-          <div key={k} className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2 last:border-0">
-            <dt className="text-muted">{k}</dt>
-            <dd className="num text-right text-ink">{val}</dd>
+
+      {h.accidents.length > 0 && (
+        <ol className="mt-4 border-l-2 border-line pl-4">
+          {h.accidents.map((a) => (
+            <li key={a.date + a.description} className="relative pb-3 text-sm last:pb-0">
+              <span className="absolute top-1.5 -left-[21px] h-2 w-2 rounded-full bg-warn-ink" aria-hidden="true" />
+              <p className="num text-ink">
+                {a.date}
+                {a.province ? ` · ${a.province}` : ''}
+                {a.claim != null ? ` · ${money(a.claim)} claim` : ''}
+              </p>
+              <p className="text-muted">{a.description}</p>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      <dl className="mt-4 grid grid-cols-1 gap-x-8 text-sm sm:grid-cols-2">
+        {FLAGS.map(([key, label]) => (
+          <div key={key} className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2">
+            <dt className="text-muted">{label}</dt>
+            <dd className="text-right">
+              <Flag value={h[key]} />
+            </dd>
           </div>
         ))}
+        <div className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2">
+          <dt className="text-muted">Use</dt>
+          <dd className="text-right text-ink">{np.length ? `${np.join(', ')}, then personal` : 'Personal'}</dd>
+        </div>
+        <div className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2">
+          <dt className="text-muted">Registered in</dt>
+          <dd className="num text-right text-ink">{h.registrations?.length ? h.registrations.join(', ') : '—'}</dd>
+        </div>
+        <div className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2 sm:border-0">
+          <dt className="text-muted">Service records</dt>
+          <dd className="num text-right text-ink">{h.serviceRecords ?? '—'}</dd>
+        </div>
+        <div className="flex min-h-10 items-center justify-between gap-4 py-2">
+          <dt className="text-muted">VIN</dt>
+          <dd className="num text-right text-ink">{v.vin ? `ending ${v.vin.slice(-6)}` : 'Not provided'}</dd>
+        </div>
       </dl>
+
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        {report ? (
+          <a href={report} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-[var(--radius-control)] bg-primary px-3.5 text-sm font-medium text-white no-underline">
+            Open CARFAX Canada report
+            <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+          </a>
+        ) : (
+          <a href="https://www.carfax.ca/" target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-[var(--radius-control)] border border-control bg-surface px-3.5 text-sm font-medium text-ink no-underline hover:border-[#aeb4bb]">
+            Order a report on carfax.ca
+            <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+          </a>
+        )}
+        <p className="text-xs text-muted">{report ? 'Opens the full report the seller attached to this listing.' : 'This listing has no CARFAX report link yet.'}</p>
+      </div>
+      <p className="mt-3 text-xs leading-5 text-muted">{SOURCE_NOTE[h.source] ?? ''} A history report covers only what was reported to CARFAX Canada; pair it with an inspection.</p>
+    </Card>
+  );
+}
+
+function Recalls({ v }) {
+  const r = v.recalls;
+  const [open, setOpen] = useState(false);
+  if (!r) return null;
+  const items = open ? r.items : r.items.slice(0, 3);
+  return (
+    <Card className="p-5" aria-labelledby="recalls-h">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 id="recalls-h" className="text-base font-medium">Safety recalls</h2>
+        <p className="num text-xs text-muted">{r.source} · as of {r.asOf}</p>
+      </div>
+      <p className="mt-1 text-sm text-ink">
+        {r.items.length === 0
+          ? `No recalls issued for the ${v.year} ${v.make} ${v.model}.`
+          : `${r.items.length} ${r.items.length === 1 ? 'recall' : 'recalls'} issued for the ${v.year} ${v.make} ${v.model}.`}
+      </p>
+      {r.items.length > 0 && (
+        <p className="mt-1 text-xs leading-5 text-muted">
+          A recall may cover only some cars from a model year. Ask the seller for the VIN and check it with {v.make}&rsquo;s recall lookup to see whether this car is affected and already fixed.
+        </p>
+      )}
+      {r.items.length > 0 && (
+        <ul className="mt-3">
+          {items.map((it) => (
+            <li key={it.number} className="border-t border-rule py-3 text-sm">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                <p className="font-medium text-ink">{it.system ? it.system.charAt(0) + it.system.slice(1).toLowerCase() : 'Recall'}</p>
+                <p className="num text-xs text-muted">
+                  {it.number} · {it.date}
+                </p>
+              </div>
+              <p className="mt-1 line-clamp-3 text-muted">{it.summary.replace(/^Issue\s*:\s*/i, '')}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+      {r.items.length > 3 && (
+        <button type="button" onClick={() => setOpen((o) => !o)} className="mt-1 inline-flex h-8 items-center text-sm text-ink underline hover:no-underline">
+          {open ? 'Show fewer' : `Show all ${r.items.length}`}
+        </button>
+      )}
+      <p className="mt-2 text-xs text-muted">
+        Source:{' '}
+        <a href={r.url} target="_blank" rel="noreferrer" className="text-muted underline hover:text-ink">
+          {r.dataset}
+        </a>
+        , Transport Canada open data.
+      </p>
     </Card>
   );
 }
@@ -307,14 +417,17 @@ export default function VehicleDetail() {
             <Reveal hero media delay={0.1} className="order-1 lg:order-none">
               <Gallery v={v} />
             </Reveal>
-            <Reveal className="order-4 lg:order-none">
+            <Reveal className="order-6 lg:order-none">
               <Specs v={v} />
             </Reveal>
-            <Reveal className="order-5 lg:order-none">
+            <Reveal className="order-7 lg:order-none">
               <Features v={v} />
             </Reveal>
-            <Reveal className="order-6 lg:order-none">
+            <Reveal className="order-8 lg:order-none">
               <Inspection v={v} />
+            </Reveal>
+            <Reveal className="order-3 lg:order-none">
+              <History v={v} />
             </Reveal>
           </div>
 
@@ -332,16 +445,16 @@ export default function VehicleDetail() {
                   <PricePosition vehicle={v} detailed />
                 </div>
                 <p className="mt-3 text-xs leading-5 text-muted">
-                  Compared with {v.model} listings within two model years and 25,000 km.{' '}
+                  Compared with {v.make} {v.model} listings within two model years and 25,000 km.{' '}
                   {r.key === 'great' ? 'Five percent or more under the average counts as a great deal.' : r.key === 'fair' ? 'Within 3% over to 5% under the average counts as fair.' : 'More than 3% over the average; there may be room to negotiate.'}
                 </p>
               </Card>
             </Reveal>
-            <Reveal hero delay={0.2} className="order-3 lg:order-none">
+            <Reveal hero delay={0.2} className="order-4 lg:order-none">
               <FinanceCalculator vehicle={v} />
             </Reveal>
-            <Reveal className="order-7 lg:order-none">
-              <History v={v} />
+            <Reveal className="order-5 lg:order-none">
+              <Recalls v={v} />
             </Reveal>
           </div>
         </div>

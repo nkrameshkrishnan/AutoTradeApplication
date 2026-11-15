@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { BOUNDS, DRIVETRAINS, FUELS, SOURCES, TRANSMISSIONS, activeFilterCount, facetCounts } from '../lib/filters.js';
+import { BOUNDS, DRIVETRAINS, FUELS, HISTORY, SOURCES, TRANSMISSIONS, activeFilterCount, facetCounts } from '../lib/filters.js';
 import { money, num } from '../lib/format.js';
 
 function Group({ label, children, aside }) {
@@ -136,6 +136,10 @@ export default function FilterPanel({ filters, setFilters, list, onReset }) {
             onChange={(e) => setFilters((f) => ({ ...f, kmMax: Number(e.target.value) }))}
           />
         </div>
+      </Group>
+
+      <Group label="Vehicle history">
+        <Checks facet="history" options={HISTORY} filters={filters} setFilters={setFilters} list={list} />
       </Group>
 
       <Group label="Transmission">
