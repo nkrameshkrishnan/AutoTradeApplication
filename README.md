@@ -21,13 +21,35 @@ It works from any sub-path (`username.github.io/<repo>/`) because `vite.config.j
 
 ## What's in it
 
-- **Inventory** (`#/`): the year filter always spans 2010 to next year's model year, whatever is in stock; instant search (make, model, trim, colour, city or feature), body-type counts that double as quick filters (SUV, Sedan, Truck, Hatchback, EV), a filter sidebar (price, year, kilometres, transmission, drivetrain, fuel, source platform) that becomes a bottom sheet on phones, five sorts, and a heart on every car for the Saved cars drawer.
+- **Inventory** (`#/`): live dealer listings when `MARKETCHECK_API_KEY` is set (see Live listings), otherwise the samples; the year filter always spans 2010 to next year's model year, whatever is in stock; instant search (make, model, trim, colour, city or feature), body-type counts that double as quick filters (SUV, Sedan, Truck, Hatchback, EV), a filter sidebar (price, year, kilometres, transmission, drivetrain, fuel, source platform) that becomes a bottom sheet on phones, five sorts, and a heart on every car for the Saved cars drawer.
 - **Price position**: every car is placed on a strip of similar listings (low, average, high), rated Great deal (5% or more under), Fair price, or Above market (more than 3% over).
 - **Compare** (`#/compare`): tick 2–4 cars; a tray at the bottom holds them. The matrix pins its header row, marks the best value in each numeric row, and has a "Highlight differences only" switch. **Copy link** shares a comparison as `#/compare?ids=a,b,c`.
 - **Vehicle page** (`#/vehicle/<id>`): photo viewer with thumbnails and arrow keys, specifications, features, a 150-point inspection by area, accident and ownership history, and a link to the original listing.
 - **Financing calculator**: down payment, trade-in (deducted before tax), 36–84 month term, APR and province (ON 13% HST, BC 5% GST + 7% PST, AB 5% GST, QC 14.975%, and the rest). Bi-weekly and monthly payments with a breakdown that adds up to the amount financed. The settings drive every card's bi-weekly estimate.
 - **Persistence**: compare list, saved cars and calculator settings live in `localStorage` (`kilometre.*.v1`).
 - **Motion**: one ease (`cubic-bezier(0.22, 1, 0.36, 1)`), entrances only on first load and on scroll, quick press/hover feedback, tray and drawers that slide; filtering is instant. `prefers-reduced-motion` drops all travel.
+
+## Live listings
+
+By default the repo holds 21 sample listings. To show real ones, the build loads live used-car listings from Canadian dealers through the [MarketCheck Inventory Search API](https://docs.marketcheck.com/docs/api/cars/inventory/inventory-search):
+
+1. Get an API key at developers.marketcheck.com, and check that their terms allow showing listings on a public site.
+2. Add it as the repository secret `MARKETCHECK_API_KEY` (Settings → Secrets and variables → Actions).
+3. Run the **Deploy to GitHub Pages** workflow, or wait for the daily run.
+
+`scripts/listings.config.json` sets what's fetched: 40 used cars per city within 30 miles of Toronto, Ottawa, Montreal, Calgary and Vancouver, model years 2015 onwards, $5,000–$120,000. That's about 6 listing calls plus one price-stats call per make, model and year (roughly 100–200 calls a day at MarketCheck's per-call rates).
+
+What live listings carry, and what they don't:
+
+- **Real:** price (CAD), kilometres, dealer name, city, phone, link to the dealer's own listing ("View original source listing"), dealer photos, VIN, body, drivetrain, fuel, engine, colour, seats, days listed, and CARFAX one-owner and clean-title flags when the dealer states them.
+- **Computed:** the price rating compares each car with all used listings of the same make, model and year across Canada (MarketCheck stats; median, 5th and 95th percentiles). Fewer than five comparables means no rating, and the page says so.
+- **Recalls:** matched to each real car's make, model and year from Transport Canada's file.
+- **Missing until you connect more sources:** accident details (needs the CARFAX Canada API; the page shows "Accident history not reported"), the 150-point inspection (hidden), horsepower, and an itemised feature list. Features are picked out of the listing headline where it names them.
+- **Odometer units:** MarketCheck's docs say `miles` is in miles for Canada too, so it is converted to km. If your account returns kilometres, set the repository variable `MARKETCHECK_ODOMETER_UNIT` to `km`.
+
+If MarketCheck returns no listings, the build fails instead of publishing an empty site, and the last good deployment stays up.
+
+To rehearse live mode without a key: `MARKETCHECK_API_KEY=test node --import ./scripts/dev/mock-marketcheck.mjs scripts/enrich.mjs && npm run dev` (five fake listings shaped like MarketCheck's schema). With a real key: `MARKETCHECK_API_KEY=... npm run enrich && npm run dev`. Either way, put the samples back with `git checkout src/data` rather than committing the fetched data.
 
 ## Vehicle history (CARFAX Canada) and recalls
 
@@ -40,7 +62,7 @@ npm run enrich   # recalls, plus CARFAX if configured
 npm test         # pipeline tests (CSV parser, CARFAX mapping, secret handling)
 ```
 
-`.github/workflows/refresh-data.yml` runs every Monday (and on demand). It refreshes `src/data/vehicles.json`, commits it if anything changed, and redeploys.
+The deploy workflow runs this before every build (on each push to `main` and daily at 09:47 UTC). The fetched data goes into the published site, not into git.
 
 - **Recalls** come from Transport Canada's Motor Vehicle Safety Recalls Database (open data, no key). Each car's `recallQuery` names its make, model names as Transport Canada spells them, and model year. Matching is by model year, so the page tells buyers to confirm by VIN with the manufacturer.
 - **CARFAX Canada** needs a business API agreement ([VIN Scan Summary or the VHR Order/Look-up API](https://go.carfax.ca/big-solutions)). Once you have it, add repository secrets `CARFAX_API_URL` (a URL template containing `{vin}`) and `CARFAX_API_KEY`, and optionally the variable `CARFAX_AUTH_HEADER` (default `Authorization: Bearer <key>`). `scripts/providers/carfax.mjs` reads fields by their data-dictionary labels; check its `LABELS` map against the response CARFAX sends you. Only listings with a real 17-character `vin` are looked up, so sample listings (`vin: null`) never trigger a paid report.

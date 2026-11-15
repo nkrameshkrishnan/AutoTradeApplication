@@ -64,7 +64,9 @@ function FinanceStamp() {
 export default function Shell({ sidebar, title, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
-  useEffect(() => setMenuOpen(false), [pathname]);
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => (document.body.style.overflow = '');

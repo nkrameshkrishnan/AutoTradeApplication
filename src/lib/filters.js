@@ -4,7 +4,7 @@ import { isClean, nonPersonal } from './history.js';
 export const BODY_TYPES = ['All', 'SUV', 'Sedan', 'Truck', 'Hatchback', 'EV'];
 export const TRANSMISSIONS = ['Automatic', 'Manual'];
 export const DRIVETRAINS = ['AWD', 'FWD', 'RWD', '4WD'];
-export const FUELS = ['Gas', 'Hybrid', 'Electric'];
+export const FUELS = ['Gas', 'Hybrid', 'Electric', 'Diesel'];
 export const SOURCES = ['Clutch', 'AutoTrader', 'CarGurus', 'Dealer Direct'];
 export const HISTORY = ['No reported accidents', 'One owner', 'Personal use only'];
 
@@ -50,7 +50,7 @@ export const EMPTY_FILTERS = {
 };
 
 const haystack = (v) =>
-  [v.year, v.make, v.model, v.trim, v.bodyType, v.fuelType, v.drivetrain, v.transmission, v.colour, v.city, v.source, ...v.features, isClean(v.history) ? 'no accidents clean carfax' : 'accident', v.history?.owners === 1 ? 'one owner' : '']
+  [v.year, v.make, v.model, v.trim, v.bodyType, v.fuelType, v.drivetrain, v.transmission, v.colour, v.city, v.source, v.dealer?.name, ...v.features, isClean(v.history) ? 'no accidents clean carfax' : 'accident', v.history?.owners === 1 ? 'one owner' : '']
     .join(' ')
     .toLowerCase();
 
@@ -75,7 +75,7 @@ export function matches(v, f, skip = null) {
   }
   if (skip !== 'price' && (v.price < f.priceMin || v.price > f.priceMax)) return false;
   if (skip !== 'year' && (v.year < f.yearMin || v.year > f.yearMax)) return false;
-  if (skip !== 'km' && f.kmMax < BOUNDS.kmMax && v.odometer > f.kmMax) return false;
+  if (skip !== 'km' && f.kmMax < BOUNDS.kmMax && (v.odometer == null || v.odometer > f.kmMax)) return false;
   if (skip !== 'transmission' && f.transmission.length && !f.transmission.includes(v.transmission)) return false;
   if (skip !== 'drivetrain' && f.drivetrain.length && !f.drivetrain.includes(v.drivetrain)) return false;
   if (skip !== 'fuel' && f.fuel.length && !f.fuel.includes(v.fuelType)) return false;
@@ -99,19 +99,19 @@ export function facetCounts(list, f, facet, options) {
 
 export function sortList(list, sort, query) {
   const out = [...list];
-  const deal = (v) => v.price / v.marketAvg;
+  const deal = (v) => (v.marketAvg ? v.price / v.marketAvg : 1);
   switch (sort) {
     case 'price-asc':
       return out.sort((a, b) => a.price - b.price);
     case 'price-desc':
       return out.sort((a, b) => b.price - a.price);
     case 'km-asc':
-      return out.sort((a, b) => a.odometer - b.odometer);
+      return out.sort((a, b) => (a.odometer ?? Infinity) - (b.odometer ?? Infinity));
     case 'year-desc':
       return out.sort((a, b) => b.year - a.year || a.odometer - b.odometer);
     default:
       // Best match: search relevance first, then how far under market, then freshest listing.
-      return out.sort((a, b) => queryScore(b, query) - queryScore(a, query) || deal(a) - deal(b) || a.listedDays - b.listedDays);
+      return out.sort((a, b) => queryScore(b, query) - queryScore(a, query) || deal(a) - deal(b) || (a.listedDays ?? 0) - (b.listedDays ?? 0));
   }
 }
 

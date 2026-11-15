@@ -1,0 +1,7 @@
+{
+  "mode": "sample",
+  "provider": null,
+  "refreshedAt": null,
+  "count": 21,
+  "cities": ["Toronto", "Ottawa", "Montreal", "Calgary", "Vancouver"]
+}

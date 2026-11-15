@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Heart, X } from 'lucide-react';
 import { useStore } from '../lib/store.jsx';
-import { asset, km, money, place, title } from '../lib/format.js';
+import { asset, km, money, place, title, cover } from '../lib/format.js';
 import { RatingBadge } from './ui.jsx';
 import { CompareCheck } from './VehicleCard.jsx';
 import { EASE } from './motion.jsx';
@@ -88,7 +88,7 @@ export default function SavedDrawer() {
                     >
                       <div className="flex gap-3">
                         <Link to={`/vehicle/${v.id}`} onClick={() => setSavedOpen(false)} className="flex-none">
-                          <img src={asset(v.images[0].src)} alt="" className="h-[60px] w-[88px] rounded-[6px] object-cover" />
+                          <img src={asset(cover(v))} alt="" className="h-[60px] w-[88px] rounded-[6px] object-cover" />
                         </Link>
                         <div className="min-w-0 flex-1">
                           <div className="flex items-start justify-between gap-2">

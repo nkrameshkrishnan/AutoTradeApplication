@@ -19,6 +19,10 @@ async function download(url, dest) {
 
 const clean = (s) => s.replace(/\s+/g, ' ').trim();
 
+// Listing sites and Transport Canada spell models differently ("Kona Electric" / "KONA EV",
+// "F150" / "F-150"). Compare on letters and digits only, with ELECTRIC read as EV.
+export const modelKey = (s) => String(s).toUpperCase().replace(/\bELECTRIC\b/g, 'EV').replace(/[^A-Z0-9]/g, '');
+
 export async function enrichRecalls(vehicles, { csvPath, today, log = console.log }) {
   const path = csvPath ?? '/tmp/vrdb_full_monthly.csv';
   if (!csvPath || !existsSync(path)) {
@@ -46,7 +50,7 @@ export async function enrichRecalls(vehicles, { csvPath, today, log = console.lo
     if (!cars) continue;
     const model = (r.MODEL_NAME_NM || '').trim().toUpperCase();
     for (const v of cars) {
-      if (!v.recallQuery.models.some((m) => m.toUpperCase() === model)) continue;
+      if (!v.recallQuery.models.some((m) => modelKey(m) === modelKey(model))) continue;
       const number = String(r.RECALL_NUMBER_NUM).trim();
       const items = found.get(v.id);
       if (items.has(number)) continue; // one row per model; keep one per recall

@@ -4,7 +4,7 @@ const int = new Intl.NumberFormat('en-CA', { maximumFractionDigits: 0 });
 
 export const money = (n) => cad0.format(Math.round(n));
 export const money2 = (n) => cad2.format(n);
-export const km = (n) => `${int.format(n)} km`;
+export const km = (n) => (n == null ? 'Kilometres not listed' : `${int.format(n)} km`);
 export const num = (n) => int.format(n);
 export const signedMoney = (n) => (n > 0 ? '+' : n < 0 ? '−' : '') + cad0.format(Math.abs(Math.round(n)));
 
@@ -12,7 +12,7 @@ export const signedMoney = (n) => (n > 0 ? '+' : n < 0 ? '−' : '') + cad0.form
 const makeModel = (v) => (v.model.startsWith(v.make) ? v.model : `${v.make} ${v.model}`);
 export const title = (v) => `${v.year} ${makeModel(v)}`;
 export const fullTitle = (v) => `${title(v)} ${v.trim}`;
-export const place = (v) => `${v.city}, ${v.province}`;
+export const place = (v) => [v.city, v.province].filter(Boolean).join(', ') || 'Location not listed';
 
 export function listedAgo(days) {
   if (days <= 0) return 'today';
@@ -23,8 +23,11 @@ export function listedAgo(days) {
 }
 
 export function efficiency(v) {
-  if (v.fuelType === 'Electric') return `${num(v.evRange)} km range`;
-  return `${v.fuelCity.toFixed(1)} city / ${v.fuelHwy.toFixed(1)} hwy L/100 km`;
+  if (v.fuelType === 'Electric') return v.evRange ? `${num(v.evRange)} km range` : '—';
+  return v.fuelCity && v.fuelHwy ? `${v.fuelCity.toFixed(1)} city / ${v.fuelHwy.toFixed(1)} hwy L/100 km` : '—';
 }
 
-export const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+// Bundled photos are relative to the site; live listings bring absolute dealer photo URLs.
+export const asset = (path) => (/^https?:\/\//.test(path) ? path : `${import.meta.env.BASE_URL}${path}`);
+
+export const cover = (v) => v.images?.[0]?.src ?? 'images/no-photo.svg';

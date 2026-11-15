@@ -59,6 +59,8 @@ export function calculateFinance(price, settings) {
 
 // Price position against similar listings (same model, ±2 years, ±25,000 km).
 export function priceRating(v) {
+  // Too few comparable listings to judge the price: say nothing rather than guess.
+  if (!v.marketAvg) return { key: 'none', label: 'Not rated', diff: 0, pct: 0 };
   const diff = v.price - v.marketAvg;
   const pct = diff / v.marketAvg;
   if (pct <= -0.05) return { key: 'great', label: 'Great deal', diff, pct };

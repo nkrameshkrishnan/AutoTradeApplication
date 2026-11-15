@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Heart, ShieldAlert, ShieldCheck } from 'lucide-react';
+import { Heart, ShieldAlert, ShieldCheck, ShieldQuestion } from 'lucide-react';
 import { useStore, MAX_COMPARE } from '../lib/store.jsx';
 import { calculateFinance } from '../lib/finance.js';
 import { asset, km, money, place, title } from '../lib/format.js';
 import { PricePosition, RatingBadge } from './ui.jsx';
 import { EASE } from './motion.jsx';
-import { accidentLabel, isClean, ownersLabel } from '../lib/history.js';
+import { accidentLabel, accidentsKnown, isClean, ownersLabel } from '../lib/history.js';
 
 export function SaveButton({ id, name, className = '' }) {
   const { saved, toggleSaved } = useStore();
@@ -54,7 +54,7 @@ export default function VehicleCard({ v }) {
   const { finance } = useStore();
   const pay = calculateFinance(v.price, finance);
   const name = `${title(v)} ${v.trim}`;
-  const img = v.images[0];
+  const img = v.images[0] ?? { src: 'images/no-photo.svg', alt: '' };
   return (
     <motion.article
       className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-colors hover:border-[#cdd2d8]"
@@ -97,11 +97,13 @@ export default function VehicleCard({ v }) {
         <p className="mt-1 flex items-center gap-1.5 text-[13px]">
           {isClean(v.history) ? (
             <ShieldCheck size={14} strokeWidth={1.8} className="flex-none text-positive" aria-hidden="true" />
-          ) : (
+          ) : accidentsKnown(v.history) ? (
             <ShieldAlert size={14} strokeWidth={1.8} className="flex-none text-warn-ink" aria-hidden="true" />
+          ) : (
+            <ShieldQuestion size={14} strokeWidth={1.8} className="flex-none text-muted" aria-hidden="true" />
           )}
-          <span className={isClean(v.history) ? 'text-ink' : 'text-warn-ink'}>{accidentLabel(v.history)}</span>
-          <span className="text-muted">· {ownersLabel(v.history)}</span>
+          <span className={isClean(v.history) ? 'text-ink' : accidentsKnown(v.history) ? 'text-warn-ink' : 'text-muted'}>{accidentLabel(v.history)}</span>
+          {v.history?.owners != null && <span className="text-muted">· {ownersLabel(v.history)}</span>}
         </p>
 
         <div className="mt-4 mb-4">

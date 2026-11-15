@@ -23,6 +23,7 @@ const pillTone = {
 
 export function RatingBadge({ vehicle, className = '' }) {
   const r = priceRating(vehicle);
+  if (r.key === 'none') return null;
   return (
     <span className={`inline-flex h-6 flex-none items-center whitespace-nowrap rounded-full px-2.5 text-xs font-medium ${pillTone[r.key]} ${className}`}>
       {r.label}
@@ -37,6 +38,8 @@ export function RatingBadge({ vehicle, className = '' }) {
  */
 export function PricePosition({ vehicle, detailed = false }) {
   const { price, marketLow, marketHigh, marketAvg } = vehicle;
+  if (!marketAvg || !marketLow || !marketHigh || marketHigh <= marketLow)
+    return <p className="text-xs text-muted">Not enough comparable listings to rate this price.</p>;
   const span = marketHigh - marketLow;
   const at = (n) => Math.min(Math.max(((n - marketLow) / span) * 100, 0), 100);
   const r = priceRating(vehicle);

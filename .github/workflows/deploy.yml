@@ -3,9 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily at 09:47 UTC (04:47 Toronto in winter): fresh listings, prices and recalls.
+    - cron: '47 9 * * *'
   workflow_dispatch:
-  # Called by refresh-data.yml: commits made with GITHUB_TOKEN don't trigger push workflows.
-  workflow_call:
 
 permissions:
   contents: read
@@ -26,6 +27,17 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - run: npm test
+      - name: Load live listings, history and recalls
+        # Data is fetched at build time and never committed. Without MARKETCHECK_API_KEY the
+        # site keeps the sample listings in the repo; without the CARFAX secrets that step skips.
+        env:
+          MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
+          MARKETCHECK_ODOMETER_UNIT: ${{ vars.MARKETCHECK_ODOMETER_UNIT }}
+          CARFAX_API_URL: ${{ secrets.CARFAX_API_URL }}
+          CARFAX_API_KEY: ${{ secrets.CARFAX_API_KEY }}
+          CARFAX_AUTH_HEADER: ${{ vars.CARFAX_AUTH_HEADER }}
+        run: npm run enrich
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

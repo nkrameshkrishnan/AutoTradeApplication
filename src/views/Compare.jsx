@@ -6,7 +6,7 @@ import { Button, Card, RatingBadge, Switch } from '../components/ui.jsx';
 import { Reveal, PressButton } from '../components/motion.jsx';
 import { useStore, MAX_COMPARE } from '../lib/store.jsx';
 import { calculateFinance, priceRating } from '../lib/finance.js';
-import { asset, km, money, signedMoney, title } from '../lib/format.js';
+import { asset, km, money, signedMoney, title, cover } from '../lib/format.js';
 import { accidentLabel, isClean, nonPersonal } from '../lib/history.js';
 
 function pill(cls, text) {
@@ -24,29 +24,29 @@ function buildSections(cars, finance) {
       rows: [
         { label: 'Listed price', key: (c) => c.price, show: (c) => <span className="font-bold">{money(c.price)}</span>, best: 'min' },
         { label: 'Bi-weekly estimate', key: (c) => calculateFinance(c.price, finance).biweekly, show: (c) => money(calculateFinance(c.price, finance).biweekly), best: 'min' },
-        { label: 'Price rating', key: (c) => priceRating(c).key, show: (c) => <RatingBadge vehicle={c} /> },
-        { label: 'Against similar listings', key: (c) => c.price - c.marketAvg, show: (c) => signedMoney(c.price - c.marketAvg), best: 'min' },
+        { label: 'Price rating', key: (c) => priceRating(c).key, show: (c) => (priceRating(c).key === 'none' ? <span className="text-muted">Not rated</span> : <RatingBadge vehicle={c} />) },
+        { label: 'Against similar listings', key: (c) => (c.marketAvg ? c.price - c.marketAvg : null), show: (c) => (c.marketAvg ? signedMoney(c.price - c.marketAvg) : '—'), best: 'min' },
         { label: 'Listed on', key: (c) => c.source, show: (c) => c.source },
       ],
     },
     {
       name: 'Specs and efficiency',
       rows: [
-        { label: 'Engine', key: (c) => c.engine, show: (c) => c.engine },
-        { label: 'Horsepower', key: (c) => c.horsepower, show: (c) => `${c.horsepower} hp`, best: 'max' },
+        { label: 'Engine', key: (c) => c.engine, show: (c) => c.engine ?? '—' },
+        { label: 'Horsepower', key: (c) => c.horsepower, show: (c) => (c.horsepower ? `${c.horsepower} hp` : '—'), best: 'max' },
         { label: 'Transmission', key: (c) => c.transmissionDetail, show: (c) => c.transmissionDetail },
         { label: 'Drivetrain', key: (c) => c.drivetrain, show: (c) => c.drivetrain },
         { label: 'Fuel type', key: (c) => c.fuelType, show: (c) => c.fuelType },
         {
           label: 'Fuel economy',
           key: (c) => (c.fuelType === 'Electric' ? null : c.fuelCity),
-          show: (c) => (c.fuelType === 'Electric' ? <span className="text-muted">—</span> : `${c.fuelCity.toFixed(1)} city · ${c.fuelHwy.toFixed(1)} hwy L/100 km`),
+          show: (c) => (c.fuelType === 'Electric' || !c.fuelCity ? <span className="text-muted">—</span> : `${c.fuelCity.toFixed(1)} city · ${c.fuelHwy.toFixed(1)} hwy L/100 km`),
           best: noneEV ? 'min' : null,
         },
         {
           label: 'Electric range',
           key: (c) => (c.fuelType === 'Electric' ? c.evRange : null),
-          show: (c) => (c.fuelType === 'Electric' ? `${c.evRange} km` : <span className="text-muted">—</span>),
+          show: (c) => (c.fuelType === 'Electric' && c.evRange ? `${c.evRange} km` : <span className="text-muted">—</span>),
           best: allEV ? 'max' : null,
         },
       ],
@@ -54,21 +54,21 @@ function buildSections(cars, finance) {
     {
       name: 'Condition and history',
       rows: [
-        { label: 'Odometer', key: (c) => c.odometer, show: (c) => km(c.odometer), best: 'min' },
+        { label: 'Odometer', key: (c) => c.odometer, show: (c) => (c.odometer == null ? '—' : km(c.odometer)), best: 'min' },
         { label: 'Model year', key: (c) => c.year, show: (c) => String(c.year), best: 'max', bestLabel: 'Newest' },
         {
           label: 'CARFAX Canada',
           key: (c) => accidentLabel(c.history),
           show: (c) => (isClean(c.history) ? pill('bg-pos-bg text-pos-ink', accidentLabel(c.history)) : pill('bg-warn-bg text-warn-ink', accidentLabel(c.history))),
         },
-        { label: 'Reported claims', key: (c) => c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0), show: (c) => (c.history.accidents.length ? money(c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0)) : money(0)), best: 'min' },
+        { label: 'Reported claims', key: (c) => (c.history.accidents ? c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0) : null), show: (c) => (c.history.accidents ? money(c.history.accidents.reduce((s, a) => s + (a.claim ?? 0), 0)) : '—'), best: 'min' },
         { label: 'Previous owners', key: (c) => c.history.owners, show: (c) => (c.history.owners == null ? '—' : String(c.history.owners)), best: 'min', bestLabel: 'Fewest' },
-        { label: 'Title brand', key: (c) => c.history.titleBrand, show: (c) => c.history.titleBrand },
-        { label: 'Use', key: (c) => nonPersonal(c.history).join(', ') || 'Personal', show: (c) => (nonPersonal(c.history).length ? `${nonPersonal(c.history).join(', ')}, then personal` : 'Personal') },
+        { label: 'Title brand', key: (c) => c.history.titleBrand, show: (c) => c.history.titleBrand ?? '—' },
+        { label: 'Use', key: (c) => nonPersonal(c.history).join(', ') || (c.history.ownershipTypes?.length ? 'Personal' : null), show: (c) => (nonPersonal(c.history).length ? `${nonPersonal(c.history).join(', ')}, then personal` : c.history.ownershipTypes?.length ? 'Personal' : '—') },
         { label: 'Registered in', key: (c) => (c.history.registrations ?? []).join(', '), show: (c) => (c.history.registrations ?? []).join(', ') || '—' },
         { label: 'Service records', key: (c) => c.history.serviceRecords, show: (c) => (c.history.serviceRecords == null ? '—' : String(c.history.serviceRecords)), best: 'max', bestLabel: 'Most' },
         { label: 'Model-year recalls', key: (c) => c.recalls?.items.length ?? null, show: (c) => (c.recalls ? String(c.recalls.items.length) : '—'), best: 'min', bestLabel: 'Fewest' },
-        { label: 'Inspection notes', key: (c) => c.inspection.attention.length, show: (c) => `${c.inspection.attention.length} of 150 points`, best: 'min', bestLabel: 'Fewest' },
+        { label: 'Inspection notes', key: (c) => c.inspection?.attention.length ?? null, show: (c) => (c.inspection ? `${c.inspection.attention.length} of 150 points` : '—'), best: 'min', bestLabel: 'Fewest' },
       ],
     },
     {
@@ -102,7 +102,7 @@ function EmptyCompare() {
   const picked = compare.map(byId).filter(Boolean);
   const suggestions = vehicles
     .filter((v) => !compare.includes(v.id))
-    .sort((a, b) => a.price / a.marketAvg - b.price / b.marketAvg)
+    .sort((a, b) => a.price / (a.marketAvg || a.price) - b.price / (b.marketAvg || b.price))
     .slice(0, 4);
   return (
     <Card className="mt-6 p-5">
@@ -113,11 +113,11 @@ function EmptyCompare() {
       <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {suggestions.map((v) => (
           <li key={v.id} className="flex items-center gap-3 rounded-[8px] border border-line p-2">
-            <img src={asset(v.images[0].src)} alt="" className="h-12 w-[72px] flex-none rounded-[5px] object-cover" />
+            <img src={asset(cover(v))} alt="" className="h-12 w-[72px] flex-none rounded-[5px] object-cover" />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{title(v)}</p>
               <p className="num text-xs text-muted">
-                {money(v.price)} · {signedMoney(v.price - v.marketAvg)}
+                {money(v.price)}{v.marketAvg ? ` · ${signedMoney(v.price - v.marketAvg)}` : ''}
               </p>
             </div>
             <PressButton type="button" onClick={() => toggleCompare(v.id)} aria-label={`Add ${title(v)} to compare`} className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-[6px] border border-control hover:border-[#aeb4bb]">
@@ -214,7 +214,7 @@ export default function Compare() {
                     {cars.map((c) => (
                       <th key={c.id} scope="col" className="sticky top-0 z-20 border-b border-line bg-surface p-3 text-left align-top font-normal last:rounded-tr-[8px]">
                         <div className="relative">
-                          <img src={asset(c.images[0].src)} alt="" className="aspect-[3/2] w-full rounded-[6px] object-cover" />
+                          <img src={asset(cover(c))} alt="" className="aspect-[3/2] w-full rounded-[6px] object-cover" />
                           <button
                             type="button"
                             onClick={() => toggleCompare(c.id)}

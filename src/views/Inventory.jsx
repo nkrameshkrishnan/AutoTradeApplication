@@ -10,6 +10,11 @@ import { useStore } from '../lib/store.jsx';
 import { BODY_TYPES, BOUNDS, EMPTY_FILTERS, SORTS, activeFilterCount, facetCounts, matches, sortList } from '../lib/filters.js';
 import { priceRating } from '../lib/finance.js';
 import { money, num } from '../lib/format.js';
+import meta from '../data/meta.json';
+
+const refreshed = meta.refreshedAt
+  ? new Intl.DateTimeFormat('en-CA', { month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Toronto' }).format(new Date(meta.refreshedAt))
+  : null;
 
 // Filters live for the session (and survive a trip to a listing and back), not across sessions.
 let sessionFilters = EMPTY_FILTERS;
@@ -152,7 +157,7 @@ export default function Inventory() {
           <div>
             <h1 className="text-2xl leading-8 font-bold tracking-[-0.02em]">Inventory</h1>
             <p className="num mt-1 text-sm text-muted">
-              {results.length} of {vehicles.length} cars match
+              {results.length} of {vehicles.length} {meta.mode === 'live' ? 'live listings' : 'sample listings'} match
               {deals > 0 && (
                 <>
                   {' · '}
@@ -233,8 +238,18 @@ export default function Inventory() {
         )}
 
         <p className="mt-10 max-w-[70ch] text-xs leading-5 text-muted">
-          Sample inventory for demonstration. Price ratings compare each car with similar listings (same model, within two model years and 25,000 km).
-          Bi-weekly estimates include sales tax for your chosen province and exclude licensing and dealer fees. Photos: Wikimedia Commons contributors, credited on each listing.
+          {meta.mode === 'live' ? (
+            <>
+              Live dealer listings in {meta.cities.join(', ')}, via {meta.provider}, refreshed {refreshed} (Toronto time). Listings can sell between refreshes; confirm with
+              the dealer. Price ratings compare each car with used listings of the same model and year across Canada. Photos belong to each dealer.
+            </>
+          ) : (
+            <>
+              Sample inventory for demonstration. Price ratings compare each car with similar listings (same model, within two model years and 25,000 km). Photos: Wikimedia
+              Commons contributors, credited on each listing.
+            </>
+          )}{' '}
+          Bi-weekly estimates include sales tax for your chosen province and exclude licensing and dealer fees.
         </p>
       </div>
 

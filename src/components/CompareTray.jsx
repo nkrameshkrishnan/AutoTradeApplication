@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { X } from 'lucide-react';
 import { useStore, MAX_COMPARE } from '../lib/store.jsx';
-import { asset, money, title } from '../lib/format.js';
+import { asset, money, title, cover } from '../lib/format.js';
 import { Button } from './ui.jsx';
 import { EASE } from './motion.jsx';
 
@@ -50,7 +50,7 @@ export default function CompareTray() {
               {slots.map((v, i) =>
                 v ? (
                   <motion.div key={v.id} layout className="group relative flex-none" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: EASE }}>
-                    <img src={asset(v.images[0].src)} alt="" className="h-11 w-16 rounded-[5px] object-cover sm:h-12 sm:w-[72px]" />
+                    <img src={asset(cover(v))} alt="" className="h-11 w-16 rounded-[5px] object-cover sm:h-12 sm:w-[72px]" />
                     <button
                       type="button"
                       onClick={() => toggleCompare(v.id)}

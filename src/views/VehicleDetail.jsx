@@ -8,9 +8,9 @@ import { Card, PricePosition, RatingBadge } from '../components/ui.jsx';
 import { CompareCheck, SaveButton } from '../components/VehicleCard.jsx';
 import { EASE, Reveal } from '../components/motion.jsx';
 import { useStore } from '../lib/store.jsx';
-import { asset, fullTitle, km, listedAgo, money, num, place } from '../lib/format.js';
+import { asset, fullTitle, km, listedAgo, money, num, place, cover } from '../lib/format.js';
 import { priceRating } from '../lib/finance.js';
-import { FLAGS, SOURCE_NOTE, accidentLabel, isClean, nonPersonal, ownersLabel } from '../lib/history.js';
+import { FLAGS, SOURCE_NOTE, accidentLabel, accidentsKnown, isClean, nonPersonal, ownersLabel } from '../lib/history.js';
 
 const ALL_FEATURES = [
   'Heated front seats', 'Heated steering wheel', 'Heated rear seats', 'Ventilated front seats', 'Panoramic sunroof', 'Sunroof',
@@ -33,7 +33,7 @@ const RECONDITIONED = ['Replaced', 'Repaired', 'Treated', 'Resurfaced', 'Reseale
 
 function Gallery({ v }) {
   const [i, setI] = useState(0);
-  const imgs = v.images;
+  const imgs = v.images.length ? v.images : [{ src: 'images/no-photo.svg', alt: 'No photo from the dealer', credit: null }];
   const img = imgs[i];
   const go = (d) => setI((n) => (n + d + imgs.length) % imgs.length);
   return (
@@ -90,9 +90,17 @@ function Gallery({ v }) {
           ))}
         </div>
       )}
-      <figcaption className="mt-2 text-xs text-muted">
-        Photo: <a href={img.credit.source} target="_blank" rel="noreferrer" className="text-muted underline hover:text-ink">{img.credit.creator}</a>, {img.credit.license}, via Wikimedia Commons. Representative of this model; not the listed vehicle.
-      </figcaption>
+      {img.credit && (
+        <figcaption className="mt-2 text-xs text-muted">
+          {img.credit.license ? (
+            <>
+              Photo: <a href={img.credit.source} target="_blank" rel="noreferrer" className="text-muted underline hover:text-ink">{img.credit.creator}</a>, {img.credit.license}, via Wikimedia Commons. Representative of this model; not the listed vehicle.
+            </>
+          ) : (
+            <>Photos from {img.credit.creator}&rsquo;s listing.</>
+          )}
+        </figcaption>
+      )}
     </figure>
   );
 }
@@ -101,16 +109,16 @@ function Specs({ v }) {
   const rows = [
     ['Odometer', km(v.odometer)],
     ['Body type', v.bodyType],
-    ['Engine', v.engine],
-    ['Horsepower', `${v.horsepower} hp`],
+    ['Engine', v.engine ?? '—'],
+    ['Horsepower', v.horsepower ? `${v.horsepower} hp` : '—'],
     ['Transmission', v.transmissionDetail],
     ['Drivetrain', v.drivetrain],
     ['Fuel type', v.fuelType],
     v.fuelType === 'Electric'
-      ? ['Range', `${num(v.evRange)} km · ${v.evConsumption.toFixed(1)} kWh/100 km`]
-      : ['Fuel economy', `${v.fuelCity.toFixed(1)} city · ${v.fuelHwy.toFixed(1)} hwy L/100 km`],
-    ['Exterior colour', v.colour],
-    ['Seats', String(v.seats)],
+      ? ['Range', v.evRange ? `${num(v.evRange)} km${v.evConsumption ? ` · ${v.evConsumption.toFixed(1)} kWh/100 km` : ''}` : '—']
+      : ['Fuel economy', v.fuelCity && v.fuelHwy ? `${v.fuelCity.toFixed(1)} city · ${v.fuelHwy.toFixed(1)} hwy L/100 km` : '—'],
+    ['Exterior colour', v.colour ?? '—'],
+    ['Seats', v.seats ? String(v.seats) : '—'],
   ];
   return (
     <Card className="p-5">
@@ -136,6 +144,7 @@ function Features({ v }) {
         <h2 className="text-base font-medium">Features</h2>
         <span className="num text-xs text-muted">{v.features.length} of {ALL_FEATURES.length} tracked</span>
       </div>
+      {v.features.length === 0 && <p className="mt-2 text-sm text-muted">The dealer&rsquo;s listing doesn&rsquo;t itemise features. Check the original listing or ask the dealer.</p>}
       <ul className="mt-3 grid grid-cols-1 gap-x-8 sm:grid-cols-2">
         {v.features.map((f) => (
           <li key={f} className="flex h-8 items-center gap-2.5 text-sm text-ink">
@@ -163,6 +172,7 @@ function Features({ v }) {
 }
 
 function Inspection({ v }) {
+  if (!v.inspection) return null;
   const att = v.inspection.attention;
   const noted = att.length;
   return (
@@ -236,14 +246,14 @@ function History({ v }) {
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${clean ? 'bg-pos-bg text-pos-ink' : 'bg-warn-bg text-warn-ink'}`}>{accidentLabel(h)}</span>
+        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${clean ? 'bg-pos-bg text-pos-ink' : accidentsKnown(h) ? 'bg-warn-bg text-warn-ink' : 'bg-neu-bg text-neu-ink'}`}>{accidentLabel(h)}</span>
         <span className="inline-flex h-6 items-center rounded-full bg-neu-bg px-2.5 text-xs font-medium text-neu-ink">{ownersLabel(h)}</span>
-        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${h.titleBrand === 'Normal' ? 'bg-neu-bg text-neu-ink' : 'bg-warn-bg text-warn-ink'}`}>
-          {h.titleBrand === 'Normal' ? 'Normal branding' : `${h.titleBrand} title`}
+        <span className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium ${h.titleBrand == null || h.titleBrand === 'Normal' ? 'bg-neu-bg text-neu-ink' : 'bg-warn-bg text-warn-ink'}`}>
+          {h.titleBrand == null ? 'Title brand not reported' : h.titleBrand === 'Normal' ? 'Clean title' : `${h.titleBrand} title`}
         </span>
       </div>
 
-      {h.accidents.length > 0 && (
+      {h.accidents?.length > 0 && (
         <ol className="mt-4 border-l-2 border-line pl-4">
           {h.accidents.map((a) => (
             <li key={a.date + a.description} className="relative pb-3 text-sm last:pb-0">
@@ -270,7 +280,7 @@ function History({ v }) {
         ))}
         <div className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2">
           <dt className="text-muted">Use</dt>
-          <dd className="text-right text-ink">{np.length ? `${np.join(', ')}, then personal` : 'Personal'}</dd>
+          <dd className="text-right text-ink">{np.length ? `${np.join(', ')}, then personal` : h.ownershipTypes?.length ? 'Personal' : '—'}</dd>
         </div>
         <div className="flex min-h-10 items-center justify-between gap-4 border-b border-rule py-2">
           <dt className="text-muted">Registered in</dt>
@@ -282,7 +292,7 @@ function History({ v }) {
         </div>
         <div className="flex min-h-10 items-center justify-between gap-4 py-2">
           <dt className="text-muted">VIN</dt>
-          <dd className="num text-right text-ink">{v.vin ? `ending ${v.vin.slice(-6)}` : 'Not provided'}</dd>
+          <dd className="num text-right text-ink">{v.vin ?? 'Not provided'}</dd>
         </div>
       </dl>
 
@@ -361,7 +371,9 @@ export default function VehicleDetail() {
   const { id } = useParams();
   const { byId } = useStore();
   const v = byId(id);
-  useEffect(() => window.scrollTo(0, 0), [id]);
+  useEffect(() => {
+    window.scrollTo(0, 0); // braces matter: Chrome now returns a Promise from scrollTo, and React would call it as a cleanup
+  }, [id]);
 
   if (!v)
     return (
@@ -388,17 +400,23 @@ export default function VehicleDetail() {
 
         <Reveal hero className="mt-3">
           <Card as="header" className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
-            <img src={asset(v.images[0].src)} alt="" className="hidden h-[62px] w-[92px] flex-none rounded-[6px] object-cover sm:block" />
+            <img src={asset(cover(v))} alt="" className="hidden h-[62px] w-[92px] flex-none rounded-[6px] object-cover sm:block" />
             <div className="min-w-0 flex-1">
               <h1 className="text-2xl leading-8 font-medium tracking-[-0.02em]">{name}</h1>
               <p className="num mt-0.5 text-[13px] text-muted">
-                {km(v.odometer)} · {place(v)} · listed on {v.source} {listedAgo(v.listedDays)}
+                {km(v.odometer)} · {place(v)} · listed {v.dealer?.name ? `by ${v.dealer.name}` : `on ${v.source}`} {listedAgo(v.listedDays ?? 0)}
+                {v.dealer?.phone && (
+                  <>
+                    {' · '}
+                    <a href={`tel:${v.dealer.phone}`} className="text-muted underline hover:text-ink">{v.dealer.phone}</a>
+                  </>
+                )}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <CompareCheck id={v.id} name={name} />
               <SaveButton id={v.id} name={name} />
-              <a
+              {v.sourceUrl && <a
                 href={v.sourceUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -406,7 +424,7 @@ export default function VehicleDetail() {
               >
                 View original source listing
                 <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
-              </a>
+              </a>}
             </div>
           </Card>
         </Reveal>
@@ -423,9 +441,11 @@ export default function VehicleDetail() {
             <Reveal className="order-7 lg:order-none">
               <Features v={v} />
             </Reveal>
-            <Reveal className="order-8 lg:order-none">
-              <Inspection v={v} />
-            </Reveal>
+            {v.inspection && (
+              <Reveal className="order-8 lg:order-none">
+                <Inspection v={v} />
+              </Reveal>
+            )}
             <Reveal className="order-3 lg:order-none">
               <History v={v} />
             </Reveal>
@@ -445,8 +465,14 @@ export default function VehicleDetail() {
                   <PricePosition vehicle={v} detailed />
                 </div>
                 <p className="mt-3 text-xs leading-5 text-muted">
-                  Compared with {v.make} {v.model} listings within two model years and 25,000 km.{' '}
-                  {r.key === 'great' ? 'Five percent or more under the average counts as a great deal.' : r.key === 'fair' ? 'Within 3% over to 5% under the average counts as fair.' : 'More than 3% over the average; there may be room to negotiate.'}
+                  {r.key === 'none' ? (
+                    'Price ratings need at least five comparable listings for this model year.'
+                  ) : (
+                    <>
+                      Compared with {v.marketBasis ?? `${v.make} ${v.model} listings within two model years and 25,000 km`}.{' '}
+                      {r.key === 'great' ? 'Five percent or more under the average counts as a great deal.' : r.key === 'fair' ? 'Within 3% over to 5% under the average counts as fair.' : 'More than 3% over the average; there may be room to negotiate.'}
+                    </>
+                  )}
                 </p>
               </Card>
             </Reveal>

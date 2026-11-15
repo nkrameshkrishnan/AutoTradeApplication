@@ -2,9 +2,11 @@
 // Flags can be true, false, or null (the source didn't say). Null is shown as a dash, never as "no".
 
 export const accidentCount = (h) => h?.accidents?.length ?? 0;
+// accidents === null means the source didn't say (a live listing before CARFAX is connected).
+export const accidentsKnown = (h) => Array.isArray(h?.accidents) || h?.damageReported != null;
 
 export function isClean(h) {
-  if (!h) return false;
+  if (!h || !accidentsKnown(h)) return false;
   return accidentCount(h) === 0 && h.damageReported !== true && !hasSevereFlag(h);
 }
 
@@ -14,6 +16,7 @@ export function hasSevereFlag(h) {
 
 export function accidentLabel(h) {
   if (!h) return 'No history on file';
+  if (!accidentsKnown(h)) return 'Accident history not reported';
   const n = accidentCount(h);
   if (n === 0 && h.damageReported) return 'Damage reported';
   if (n === 0) return 'No accidents reported';
@@ -35,6 +38,7 @@ export const FLAGS = [
 ];
 
 export const SOURCE_NOTE = {
+  'listing-flags': 'Only what the dealer states on the listing. Accident details need the CARFAX Canada report.',
   sample: 'Sample history for this demo listing. Real listings show the summary from the CARFAX Canada report the seller provides.',
   listing: 'Summary taken from the CARFAX Canada report linked on the original listing.',
   'carfax-api': 'Retrieved from CARFAX Canada by VIN.',
